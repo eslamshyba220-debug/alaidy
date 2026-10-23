@@ -1,0 +1,9 @@
+node_modules
+.next
+.next-dev
+out
+.DS_Store
+.env*
+!.env.example
+*.tsbuildinfo
+REPAIR_REPORT.md
