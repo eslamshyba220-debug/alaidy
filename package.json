@@ -9,10 +9,10 @@
     "check": "node scripts/check-site.mjs"
   },
   "dependencies": {
+    "isomorphic-dompurify": "2.16.0",
     "next": "^15.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "isomorphic-dompurify": "^2.16.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
