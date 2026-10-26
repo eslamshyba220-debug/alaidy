@@ -25798,3 +25798,910 @@
   :global(html[lang="ar"]) .sections-hero { padding-block-start: 280px; }
   :global(html[lang="ar"]) :is(.consultation-hero h1, .consultation-intro h2) { line-height: 1.5; }
 }
+
+.mobile-menu-button,
+.mobile-contact-link { display: none; }
+
+.about-hero-title {
+  max-width: 100%;
+  color: #fff;
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+@media (max-width: 767px) {
+  .desktop-2 {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 10px 12px;
+    background: transparent;
+    z-index: 100;
+  }
+  .desktop-2 .container-full {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+  }
+  .desktop-2 .left {
+    display: grid;
+    position: relative;
+    grid-template-columns: auto minmax(0, 1fr) 44px;
+    width: 100%;
+    height: auto;
+    min-height: 64px;
+    flex: 1 1 auto;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    overflow: visible;
+  }
+  .desktop-2 .left-2 {
+    width: 48px;
+    height: 44px;
+  }
+  .desktop-2 .image-1-2,
+  .desktop-2 .div-24,
+  .desktop-2 .img-6 {
+    width: 48px;
+    height: 44px;
+  }
+  .desktop-2 .img-6 { object-fit: contain; }
+  .desktop-2 .middle {
+    display: none;
+    position: absolute;
+    inset-block-start: calc(100% + 8px);
+    inset-inline: 0;
+    width: auto;
+    height: auto;
+    min-height: 0;
+    flex: none;
+    padding: 10px;
+    border: 1px solid #e5eaf2;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 14px 34px rgb(12 36 69 / 16%);
+    overflow: visible;
+    z-index: 5;
+  }
+  .desktop-2 .middle-open { display: block; }
+  .desktop-2 .div-25 {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+  }
+  .desktop-2 .div-25 > div {
+    width: 100%;
+    height: auto;
+    white-space: normal;
+  }
+  .desktop-2 .div-25 > div > div {
+    width: 100%;
+    height: auto;
+  }
+  .desktop-2 .a-3 {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: start;
+    white-space: normal;
+  }
+  .desktop-2 .a-3:hover,
+  .desktop-2 .a-3:focus-visible { background: #f1f5fb; }
+  .mobile-contact-link {
+    display: block;
+    color: #084398;
+    font-weight: 600;
+  }
+  .mobile-menu-button {
+    display: flex;
+    grid-column: 3;
+    grid-row: 1;
+    width: 44px;
+    height: 44px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+    border: 1px solid #d9e4f6;
+    border-radius: 12px;
+    background: #f4f7fc;
+    color: #084398;
+    cursor: pointer;
+  }
+  .mobile-menu-button span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+  }
+  .mobile-menu-button:focus-visible { outline: 2px solid #f78b3e; outline-offset: 2px; }
+  .desktop-2 .language-toggle {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+  .desktop-2 .shape,
+  .desktop-2 .right { display: none; }
+
+  .sections-hero {
+    height: auto;
+    min-height: max(700px, 100svh);
+    justify-content: center;
+    padding: 128px 20px 56px;
+  }
+  .container-7,
+  .hero-content,
+  .top-part,
+  .content-4 {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+  }
+  .hero-content { max-width: 680px; gap: 24px; }
+  .top-part { gap: 24px; }
+  .h1-3 { font-size: clamp(34px, 9vw, 46px); line-height: 1.12; }
+  .about-hero-title {
+    font-size: clamp(48px, 12vw, 72px);
+    line-height: 1.08;
+    text-shadow: 0 2px 18px rgb(0 0 0 / 42%);
+  }
+  .description,
+  .p-71 { width: 100%; height: auto; line-height: 1.65; }
+
+  :is(.about-us-section, .bank-logos-section, .service-sections,
+    .process-sections, .solutions-section, .testimonial, .faqs-section,
+    .about, .gallery, .stats, .about-2, .team) {
+    height: auto;
+    min-height: 0;
+    padding: 56px 20px;
+  }
+  :is(.bank-logos-section, .service-sections, .process-sections,
+    .solutions-section, .testimonial, .faqs-section, .gallery, .stats) > :is(div, section) {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .about-us-section .stat-cards,
+  .stats .bottom-7,
+  .about .bottom-5,
+  .about-2 .content-9,
+  .team .content-10 {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    height: auto;
+    gap: 24px;
+  }
+  .stat-cards > *,
+  .stats .bottom-7 > *,
+  .about .bottom-5 > * { width: 100%; max-width: 100%; }
+  .solutions-section .container-12 { gap: 32px; }
+  .solutions-section .bottom-6,
+  .solutions-section .scroll-container {
+    height: auto;
+    gap: 20px;
+  }
+  .solutions-section :is(.div-71, .div-84, .div-95, .div-102, .div-118) {
+    position: relative;
+    inset-block-start: auto;
+    height: auto;
+    aspect-ratio: auto;
+  }
+  .solutions-section :is(.desktop-3, .desktop-4) {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e6ebf2;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(16 46 88 / 6%);
+  }
+  .solutions-section :is(.desktop-3, .desktop-4) > div {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    flex: 0 1 auto;
+  }
+  .solutions-section :is(.desktop-3, .desktop-4) > :is(
+    [class*="heading"], [class*="subheading-services"]
+  ) {
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 20px;
+    overflow: visible;
+  }
+  .solutions-section :is(.desktop-3, .desktop-4) [class*="heading"] {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+  .solutions-section :is(.desktop-3, .desktop-4) [class*="eyebrow"] {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    align-items: flex-start;
+    overflow: visible;
+  }
+  .solutions-section :is(.desktop-3, .desktop-4) :is(h2, p) {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    white-space: normal;
+  }
+  .solutions-section :is(.desktop-3, .desktop-4) [class*="banner"] {
+    height: 200px;
+    min-height: 0;
+  }
+  .solutions-section :is(.desktop-3, .desktop-4) [class*="dynamic-ski"],
+  .solutions-section :is(.desktop-3, .desktop-4) [class*="img-"] {
+    height: 200px;
+    min-height: 0;
+  }
+  .scroll-container { gap: 24px; }
+  .ticker-text { min-height: 0; padding-block: 16px; }
+  .div-133, .div-177 { width: 100%; }
+}
+
+@media (max-width: 420px) {
+  .desktop-2 { padding-inline: 10px; }
+  .desktop-2 .left { padding-inline: 10px; }
+  .desktop-2 .left-2,
+  .desktop-2 .image-1-2,
+  .desktop-2 .div-24,
+  .desktop-2 .img-6 { width: 42px; }
+  .language-toggle { gap: 0; padding: 3px; }
+  .language-toggle button { min-height: 34px; padding: 6px 9px; }
+  .sections-hero { padding-inline: 18px; }
+  :is(.about-us-section, .bank-logos-section, .service-sections,
+    .process-sections, .solutions-section, .testimonial, .faqs-section,
+    .about, .gallery, .stats, .about-2, .team) { padding-inline: 18px; }
+}
+
+.ticker-text {
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  width: 100%;
+  height: auto;
+  max-width: 1440px;
+  padding: 16px 24px;
+  margin-inline: auto;
+  overflow: visible;
+  text-align: center;
+}
+.ticker-text :is(.text-01, .text-02, .text-03) {
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  flex: 0 1 auto;
+  white-space: normal;
+  text-align: center;
+}
+.ticker-text :is(.p-105, .p-106, .p-107) {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  line-height: 1.6;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: normal;
+  -webkit-text-stroke: 0.2px currentColor;
+}
+.ticker-text .circle { flex: 0 0 8px; width: 8px; height: 8px; }
+
+@media (max-width: 767px) {
+  .about-us-section .container-8,
+  .about-us-section .overview-content,
+  .about-us-section .stack,
+  .about-us-section .content-5,
+  .about-us-section .top-5,
+  .about-us-section .text-17,
+  .about-us-section .p-72 {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    max-width: 100%;
+    overflow: visible;
+  }
+  .about-us-section .overview-content {
+    align-items: stretch;
+    gap: 24px;
+  }
+  .about-us-section .container-8 {
+    gap: 32px;
+    padding-inline: 0;
+  }
+  .about-us-section .content-5 { gap: 28px; }
+  .about-us-section .bottom-5 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    text-align: center;
+  }
+  .about-us-section .bottom-5 > .div-6,
+  .about-us-section :is(.div-56, .div-57) {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+  .about-us-section :is(.l, .l-alt) {
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    text-align: center;
+  }
+  .about-us-section .l-alt { flex-direction: column; }
+  .about-us-section .counter-2 {
+    align-items: center;
+    flex: 0 1 auto;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+  .about-us-section .texts-3 { flex: 0 1 auto; }
+  .about-us-section :is(.p-4, .p-59) {
+    font-size: clamp(30px, 9vw, 42px);
+    letter-spacing: -0.04em;
+    text-align: center;
+  }
+  .about-us-section :is(.texts, .texts-3, .text-1, .text-1-3, .p-5, .h4-3) {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  .about-us-section :is(.p-5, .h4-3) {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .ticker-text {
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    max-width: 1440px;
+    padding: 20px 18px;
+    margin-inline: auto;
+    overflow: visible;
+    text-align: center;
+  }
+  .ticker-text :is(.text-01, .text-02, .text-03) {
+    width: 100%;
+    height: auto;
+    flex: 0 1 auto;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+  .ticker-text :is(.p-105, .p-106, .p-107) {
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    line-height: 1.65;
+    letter-spacing: 0;
+    text-align: center;
+    white-space: normal;
+    -webkit-text-stroke: 0.2px currentColor;
+  }
+  .ticker-text .circle { display: none; }
+
+  .hero-content {
+    gap: 24px;
+    text-shadow: 0 2px 10px rgb(0 0 0 / 55%);
+  }
+  .hero-content :is(.h1-3, .description, .p-71) {
+    text-shadow: 0 2px 10px rgb(0 0 0 / 65%);
+  }
+  .h1-3 {
+    font-size: clamp(32px, 8.5vw, 40px);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    text-align: start;
+  }
+  .description,
+  .p-71 {
+    font-size: 15px;
+    line-height: 1.65;
+    text-align: start;
+  }
+
+  .faqs-section {
+    gap: 28px;
+    padding-block: 44px;
+  }
+  .container-8 { gap: 32px; }
+  .container-13 {
+    width: 100%;
+    height: auto;
+    gap: 28px;
+  }
+  .left-wrapper {
+    width: 100%;
+    height: auto;
+    gap: 24px;
+    overflow: visible;
+  }
+  .section-title-2,
+  .title-text-4,
+  .h2-7,
+  .section-description-3,
+  .p-103,
+  .help-cta,
+  .cta-heading,
+  .h4-5,
+  .call-to-action,
+  .cta-text,
+  .p-104,
+  .div-130,
+  .all-closed {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    max-width: 100%;
+  }
+  .section-title-2 { gap: 12px; }
+  .h2-7 {
+    font-size: clamp(28px, 7vw, 34px);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    white-space: normal;
+  }
+  .p-103 {
+    font-size: 15px;
+    line-height: 1.6;
+    white-space: normal;
+  }
+  .help-cta {
+    gap: 12px;
+    overflow: visible;
+  }
+  .h4-5 {
+    font-size: 18px;
+    line-height: 1.4;
+    white-space: normal;
+  }
+  .call-to-action {
+    gap: 12px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .p-104 {
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: normal;
+  }
+  .all-closed {
+    align-items: stretch;
+    gap: 12px;
+    padding: 0;
+    overflow: visible;
+  }
+  .question-1,
+  .closed,
+  .content,
+  .question,
+  .text-11,
+  .question-2 {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    max-width: 100%;
+  }
+  .closed {
+    padding: 16px;
+    border-radius: 14px;
+    overflow: visible;
+  }
+  .content {
+    align-items: stretch;
+    flex: 1 1 auto;
+    gap: 12px;
+  }
+  .question {
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    overflow: visible;
+  }
+  .text-11 {
+    flex: 1 1 auto;
+    align-items: flex-start;
+  }
+  .question-2 { flex: 1 1 auto; }
+  .p-26 {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: start;
+    white-space: normal;
+  }
+  .icon-2 { flex: 0 0 28px; }
+  .closed[data-accordion-open="true"] .vertical { display: none; }
+  .answer,
+  .answer-3,
+  .answer-5,
+  .answer-7 {
+    position: static;
+    inset: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    flex: 0 1 auto;
+    transform: none;
+    opacity: 1;
+    overflow: visible;
+  }
+  .answer-2,
+  .answer-4,
+  .answer-6,
+  .answer-8 {
+    width: 100%;
+    height: auto;
+    flex: 0 1 auto;
+  }
+  .p-27,
+  .p-28,
+  .p-29,
+  .p-30 {
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    line-height: 1.65;
+    text-align: start;
+    white-space: normal;
+  }
+  .answer[hidden],
+  .answer-3[hidden],
+  .answer-5[hidden],
+  .answer-7[hidden] {
+    display: none !important;
+  }
+
+  .stat-cards,
+  .about-us-section .stat-cards,
+  .process-card-active,
+  .process-card-inactive,
+  .call-to-action,
+  .solutions-section :is(.desktop-3, .desktop-4) {
+    gap: 16px;
+  }
+  .stat-card-1,
+  .stat-card-2,
+  .process-card-active,
+  .process-card-inactive {
+    height: auto;
+    min-height: 0;
+    padding: 18px;
+  }
+}
+
+:global(html[lang="ar"]) .faqs-section,
+:global(html[lang="ar"]) .faqs-section :is(.left-wrapper, .section-title-2, .closed, .content, .question, .text-11) {
+  direction: rtl;
+  text-align: start;
+}
+:global(html[lang="ar"]) .about-us-section .bottom-5 { direction: rtl; }
+
+.desktop-2 {
+  z-index: 1001;
+  transition: transform 220ms ease, opacity 180ms ease;
+  will-change: transform, opacity;
+}
+.div-133,
+.div-177 { z-index: 1000; }
+.desktop-2-hidden {
+  transform: translateY(calc(-100% - 16px));
+  opacity: 0;
+  pointer-events: none;
+}
+
+:global(html[lang="ar"]) .desktop .footer-content-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  align-items: start;
+  gap: clamp(32px, 5vw, 72px);
+  width: 100%;
+  height: auto;
+  direction: rtl;
+  text-align: start;
+}
+:global(html[lang="ar"]) .desktop .newsletter-wrapper {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  flex: none;
+  align-items: flex-start;
+  text-align: start;
+}
+:global(html[lang="ar"]) .desktop :is(.newsletter-form, .home, .p-31) {
+  width: 100%;
+  height: auto;
+  text-align: start;
+}
+:global(html[lang="ar"]) .desktop .footer-menu-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  flex: none;
+  direction: rtl;
+}
+:global(html[lang="ar"]) .desktop .div-20 { display: contents; }
+:global(html[lang="ar"]) .desktop :is(.footer-menu, .footer-menu-4, .social-media-wrapper) {
+  align-items: flex-start;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  height: auto;
+  text-align: start;
+}
+:global(html[lang="ar"]) .desktop :is(.main-pages, .main-pages-2, .social-media) {
+  width: 100%;
+  height: auto;
+  text-align: start;
+}
+:global(html[lang="ar"]) .desktop :is(.menu-wrapper, .menu-wrapper-2) {
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  text-align: start;
+}
+:global(html[lang="ar"]) .desktop :is(.footer-menu-2, .footer-menu-3, .footer-menu-5, .home-2,
+  .home-3, .home-4, .home-5, .home-6, .home-7, .home-8, .home-9, .home-10, .home-11, .home-12) {
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  text-align: start;
+}
+:global(html[lang="ar"]) .desktop :is(.a, .p-39, .p-40, .p-41, .p-42, .p-43, .p-44, .p-45) {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: start;
+  white-space: normal;
+  line-height: 1.8;
+}
+:global(html[lang="ar"]) .desktop .social-media-list {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 100%;
+  height: auto;
+}
+:global(html[lang="ar"]) .desktop .bottom-content-wrapper {
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+}
+:global(html[lang="ar"]) .desktop .bottom-text-wrapper {
+  width: 100%;
+  height: auto;
+  gap: 24px;
+  text-align: start;
+}
+:global(html[lang="ar"]) .desktop .banking-approval-disclaimer,
+:global(html[lang="ar"]) .desktop .p-46 {
+  width: 100%;
+  height: auto;
+  text-align: start;
+  line-height: 1.8;
+}
+:global(html[lang="ar"]) .desktop .bottombar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  height: auto;
+  direction: rtl;
+}
+:global(html[lang="ar"]) .desktop .privacy-policy { justify-self: start; }
+:global(html[lang="ar"]) .desktop .terms-of-use { justify-self: end; }
+:global(html[lang="ar"]) .desktop [class*="2000-2021-all-rights-reserved"] { max-width: 32rem; text-align: center; }
+:global(html[lang="ar"]) .desktop :is(.p-47, .p-48, .p-49, .a-2) {
+  width: auto;
+  height: auto;
+  text-align: inherit;
+  white-space: normal;
+  line-height: 1.7;
+}
+:global(html[lang="ar"]) .desktop-2 :is(.a-3, .p-50, .p-51, .p-52, .p-53, .p-54, .p-55) {
+  text-align: start;
+  white-space: normal;
+}
+:global(html[lang="ar"]) .consultation-field {
+  align-items: flex-start;
+  text-align: start;
+}
+:global(html[lang="ar"]) .consultation-field :is(input, select, textarea) { text-align: start; }
+
+@media (max-width: 1199px) {
+  :global(html[lang="ar"]) .desktop .footer-content-wrapper {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+@media (max-width: 767px) {
+  :global(html[lang="ar"]) .desktop .footer-menu-wrapper {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  :global(html[lang="ar"]) .desktop .bottombar {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
+    gap: 12px;
+  }
+  :global(html[lang="ar"]) .desktop :is(.privacy-policy, .terms-of-use) { justify-self: start; }
+  :global(html[lang="ar"]) .desktop [class*="2000-2021-all-rights-reserved"] { text-align: start; }
+}
+
+.consultation-submit-feedback {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 8px;
+  padding: 16px 18px;
+  border: 1px solid #b8d9c3;
+  border-radius: 12px;
+  background: #f0faf3;
+  color: #174d2a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.consultation-submit-feedback p { margin: 0; }
+.consultation-submit-feedback a {
+  width: fit-content;
+  color: #084398;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.consultation-submit-feedback a:focus-visible {
+  outline: 2px solid #f78b3e;
+  outline-offset: 3px;
+}
+
+.about-us-section .p-59 { color: #f78b3e; }
+.about-us-section .h4-3 {
+  color: rgba(17, 17, 17, 0.7);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-align: start;
+  white-space: normal;
+}
+
+.bank-logos-section .content-6 {
+  width: 100%;
+  height: auto;
+}
+.bank-logos-section .info-text,
+.bank-logos-section .p-73 {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  line-height: 1.55;
+  text-align: center;
+  white-space: normal;
+}
+.bank-logos-section .brand-wrap {
+  width: 100%;
+  max-width: 1368px;
+  height: 52px;
+  flex: 0 1 auto;
+  overflow: hidden;
+}
+.bank-logo-track {
+  display: flex;
+  flex: 0 0 auto;
+  width: max-content;
+  height: 100%;
+  direction: ltr;
+  animation: bank-logos-left 32s linear infinite;
+}
+.bank-logo-set {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  height: 100%;
+  padding-inline-end: 82px;
+}
+.bank-logos-section .ul-7 {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 82px;
+  width: max-content;
+  height: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: none;
+}
+.bank-logo-track:hover,
+.bank-logo-track:focus-within { animation-play-state: paused; }
+@keyframes bank-logos-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.process-sections .section-title-block {
+  width: 100%;
+  height: auto;
+  gap: 20px;
+  overflow: visible;
+}
+.process-sections .title-text-2,
+.process-sections .h2-3 {
+  width: 100%;
+  height: auto;
+  white-space: normal;
+}
+.process-sections .section-description {
+  width: 100%;
+  height: auto;
+  max-width: 760px;
+  margin-block-start: 4px;
+  text-align: center;
+}
+.process-sections .p-75 {
+  width: 100%;
+  height: auto;
+  line-height: 1.7;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-align: center;
+  white-space: normal;
+}
+.process-sections .p-75 > span {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  letter-spacing: inherit;
+  white-space: normal;
+}
+
+@media (max-width: 767px) {
+  .bank-logos-section .brand-wrap { height: 44px; }
+  .bank-logos-section .ul-7 { gap: 36px; }
+  .bank-logo-set { padding-inline-end: 36px; }
+  .process-sections .section-title-block { align-items: center; gap: 18px; }
+  .process-sections .section-description { margin-block-start: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bank-logo-track { animation: none; }
+}

@@ -55,6 +55,32 @@ import StatsCard from "./StatsCard"
 import StatsCard2 from "./StatsCard2"
 
 export default function Home3({ slots = [] , locale = "en" }: { slots?: string[] ; locale?: Locale }) {
+  const bankLogos = [
+    { src: slots[71] ?? "https://framerusercontent.com/images/NrHS3yewoKKOMJdIjggszmVP0ak.png?scale-down-to=512&width=800&height=210", item: "li", logo: "logo-01", wrapper: "div-58", image: "img-13" },
+    { src: slots[72] ?? "https://framerusercontent.com/images/VVQEYMZAC3TUbf7H7LwelOAG6mk.png?width=250&height=99", item: "li-2", logo: "logo-02", wrapper: "div-59", image: "img-14" },
+    { src: slots[73] ?? "https://framerusercontent.com/images/bBDK6cY8vU7hNGIxxLHtH62BTQo.png?scale-down-to=512&width=800&height=470", item: "li-3", logo: "logo-03", wrapper: "div-60", image: "img-15" },
+    { src: slots[74] ?? "https://framerusercontent.com/images/5dfXrcGwKVK8zKsMME1od7hSoU.png?scale-down-to=512&width=535&height=186", item: "li-4", logo: "logo-04", wrapper: "div-61", image: "img-16" },
+    { src: slots[75] ?? "https://framerusercontent.com/images/Y06hEq9T9JMTwhLZZ1FASzUjzo.png?scale-down-to=512&width=800&height=269", item: "li-5", logo: "logo-05", wrapper: "div-62", image: "img-17" },
+    { src: slots[76] ?? "https://framerusercontent.com/images/GrIJ0BTBKkNHJJkQs56slXHPpU.png?width=270&height=88", item: "li-6", logo: "logo-06", wrapper: "div-63", image: "img-18" },
+    { src: slots[77] ?? "https://framerusercontent.com/images/R0LVh8JU9YRGLdt6mUOM2jLsS4.png?scale-down-to=512&width=800&height=279", item: "li-7", logo: "logo-07", wrapper: "div-64", image: "img-19" },
+    { src: slots[78] ?? "https://framerusercontent.com/images/GfANrxCivyQ3lV5x7HmbsoA3zOw.png?width=800&height=93", item: "li-7", logo: "logo-07", wrapper: "div-64", image: "img-20" },
+  ]
+  const renderBankLogoSet = (key: string, decorative = false) => (
+    <div className={styles["bank-logo-set"]} key={key} aria-hidden={decorative}>
+      <ul className={styles["ul-7"]}>
+        {bankLogos.map((logo, index) => (
+          <li className={styles[logo.item]} key={`${key}-${index}`}>
+            <div className={styles[logo.logo]}>
+              <div className={styles[logo.wrapper]}>
+                <img className={styles[logo.image]} src={logo.src} alt="" />
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+
   return (
     <>
       <RevealWatcher />
@@ -387,64 +413,10 @@ export default function Home3({ slots = [] , locale = "en" }: { slots?: string[]
                     <p className={styles["p-73"]}>{t(slots[70] ?? "Access to Solutions Across Leading UAE Banks", locale)}</p>
                   </div>
                   <div className={styles["brand-wrap"]}>
-                    <ul className={styles["ul-7"] + " " + styles["rv-5"]} data-reveal>
-                      <li className={styles["li"]}>
-                        <div className={styles["logo-01"]}>
-                          <div className={styles["div-58"]}>
-                            <img className={styles["img-13"]} src={slots[71] ?? "https://framerusercontent.com/images/NrHS3yewoKKOMJdIjggszmVP0ak.png?scale-down-to=512&width=800&height=210"} alt="" />
-                          </div>
-                        </div>
-                      </li>
-                      <li className={styles["li-2"]}>
-                        <div className={styles["logo-02"]}>
-                          <div className={styles["div-59"]}>
-                            <img className={styles["img-14"]} src={slots[72] ?? "https://framerusercontent.com/images/VVQEYMZAC3TUbf7H7LwelOAG6mk.png?width=250&height=99"} alt="" />
-                          </div>
-                        </div>
-                      </li>
-                      <li className={styles["li-3"]}>
-                        <div className={styles["logo-03"]}>
-                          <div className={styles["div-60"]}>
-                            <img className={styles["img-15"]} src={slots[73] ?? "https://framerusercontent.com/images/bBDK6cY8vU7hNGIxxLHtH62BTQo.png?scale-down-to=512&width=800&height=470"} alt="" />
-                          </div>
-                        </div>
-                      </li>
-                      <li className={styles["li-4"]}>
-                        <div className={styles["logo-04"]}>
-                          <div className={styles["div-61"]}>
-                            <img className={styles["img-16"]} src={slots[74] ?? "https://framerusercontent.com/images/5dfXrcGwKVK8zKsMME1od7hSoU.png?scale-down-to=512&width=535&height=186"} alt="" />
-                          </div>
-                        </div>
-                      </li>
-                      <li className={styles["li-5"]}>
-                        <div className={styles["logo-05"]}>
-                          <div className={styles["div-62"]}>
-                            <img className={styles["img-17"]} src={slots[75] ?? "https://framerusercontent.com/images/Y06hEq9T9JMTwhLZZ1FASzUjzo.png?scale-down-to=512&width=800&height=269"} alt="" />
-                          </div>
-                        </div>
-                      </li>
-                      <li className={styles["li-6"]}>
-                        <div className={styles["logo-06"]}>
-                          <div className={styles["div-63"]}>
-                            <img className={styles["img-18"]} src={slots[76] ?? "https://framerusercontent.com/images/GrIJ0BTBKkNHJJkQs56slXHPpU.png?width=270&height=88"} alt="" />
-                          </div>
-                        </div>
-                      </li>
-                      <li className={styles["li-7"]}>
-                        <div className={styles["logo-07"]}>
-                          <div className={styles["div-64"]}>
-                            <img className={styles["img-19"]} src={slots[77] ?? "https://framerusercontent.com/images/R0LVh8JU9YRGLdt6mUOM2jLsS4.png?scale-down-to=512&width=800&height=279"} alt="" />
-                          </div>
-                        </div>
-                      </li>
-                      <li className={styles["li-7"]}>
-                        <div className={styles["logo-07"]}>
-                          <div className={styles["div-64"]}>
-                            <img className={styles["img-20"]} src={slots[78] ?? "https://framerusercontent.com/images/GfANrxCivyQ3lV5x7HmbsoA3zOw.png?width=800&height=93"} alt="" />
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
+                    <div className={styles["bank-logo-track"]}>
+                      {renderBankLogoSet("bank-logos")}
+                      {renderBankLogoSet("bank-logos-copy", true)}
+                    </div>
                   </div>
                   <div className={styles["left-glow"]} />
                   <div className={styles["right-glow"]} />
