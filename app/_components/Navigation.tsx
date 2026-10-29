@@ -90,7 +90,7 @@ export default function Navigation({ slots = [] , locale = "en" }: { slots?: str
                     <a className={styles["a-3"]} href="/free-consultation" onClick={closeMenu}>{t("Free Consultation", locale)}</a>
                   </div>
                 </div>
-                <a className={`${styles["a-3"]} ${styles["mobile-contact-link"]}`} href="/contact" onClick={closeMenu}>
+                <a className={`${styles["a-3"]} ${styles["mobile-contact-link"]}`} href="/free-consultation" onClick={closeMenu}>
                   {t(slots[7] ?? "Contact us", locale)}
                 </a>
               </div>
@@ -120,7 +120,7 @@ export default function Navigation({ slots = [] , locale = "en" }: { slots?: str
           </div>
           <div className={styles["right"]}>
             <div className={styles["div-33"]}>
-              <a className={styles["default-2"]} href="/contact">
+              <a className={styles["default-2"]} href="/free-consultation">
                 <div className={styles["div-34"]}>
                   <p className={styles["p-55"]}>{t(slots[7] ?? "Contact us", locale)}</p>
                 </div>

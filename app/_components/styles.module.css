@@ -6734,6 +6734,7 @@
   opacity: 0;
   overflow: visible;
   position: absolute;
+  pointer-events: none;
   text-align: start;
   transform-origin: 720px 450px;
   width: 1440px;
@@ -25133,8 +25134,9 @@
 .solid-black, .solid-black-2 { width: max-content; max-width: 100%; height: auto; min-height: 42px; }
 .div-14, .p-25, .div-41, .p-68 { width: auto; height: auto; }
 .solid-black > div:first-child, .solid-black-2 > div:first-child { flex-shrink: 1; min-width: 0; }
-.arrow-icon-wrapper { display: grid; place-items: center; }
-.arrow-icon-wrapper > * { grid-area: 1 / 1; transition: transform 250ms ease, opacity 250ms ease; }
+.arrow-icon-wrapper { display: grid; place-items: center; position: relative; overflow: hidden; }
+.arrow-icon-wrapper > * { grid-area: 1 / 1; position: relative; inset: auto; display: block; width: 20px; height: 20px; flex: none; transition: transform 250ms ease, opacity 250ms ease; }
+.arrow-icon-wrapper .arrow-icon, .arrow-icon-wrapper .arrow-icon-2 { color: #111; }
 .arrow-icon-wrapper .arrow-icon { transform: translate(0, 0); opacity: 1; }
 .arrow-icon-wrapper .arrow-icon-2 { transform: translate(-24px, 24px); opacity: 0; }
 .solid-black:hover .arrow-icon, .solid-black-2:hover .arrow-icon { transform: translate(24px, -24px); opacity: 0; }
@@ -26704,4 +26706,63 @@
 
 @media (prefers-reduced-motion: reduce) {
   .bank-logo-track { animation: none; }
+}
+
+/* Requested homepage fixes: active Next.js checkout. */
+.sections-hero { isolation: isolate; padding-inline: clamp(24px, 8vw, 150px); }
+.sections-hero .background { z-index: -2; }
+.sections-hero::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.5); pointer-events: none; z-index: -1; }
+.sections-hero .dark-overlay { background: transparent; }
+.sections-hero .container-7 { z-index: 2; overflow: visible; pointer-events: auto; }
+.sections-hero .top-part { display: grid; grid-template-columns: max-content max-content; column-gap: 20px; row-gap: 32px; width: 100%; height: auto; justify-content: start; }
+.sections-hero .content-4 { grid-column: 1 / -1; width: 100%; height: auto; }
+.sections-hero .top-part > .div-6 { width: auto; height: auto; }
+.sections-hero .hero-content { height: auto; width: 100%; }
+.sections-hero .background .div-46 { pointer-events: none; }
+.sections-hero .background button { pointer-events: auto; }
+.about-us-section .l { flex-direction: column; align-items: flex-start; gap: 12px; width: 100%; }
+.about-us-section .texts { flex: 0 0 auto; width: 100%; }
+.about-us-section .p-5 { font-size: 16px; line-height: 1.5; font-weight: 400; }
+.about-us-section .bottom-5 > div { flex: 1 1 0; overflow: visible; }
+.home-service-list { width: 100%; max-width: 1250px; margin-inline: auto; padding: 0 30px; }
+.solutions-section { width: 100%; height: auto; min-height: 0; overflow: visible; }
+.solutions-section .container-12 { width: 100%; height: auto; flex: 0 1 auto; }
+.solutions-section .top-6 { height: auto; flex: 0 1 auto; overflow: visible; }
+.home-service-row { display: grid; grid-template-columns: 1fr 1.1fr 225px; gap: 48px; align-items: start; padding-block: 40px; border-top: 1px solid #e5e5e5; }
+.home-service-row h3 { font-size: clamp(28px,3vw,40px); font-weight: 500; line-height: 1.25; margin: 16px 0 0; color: #111; }
+.home-service-row p { font-size: 16px; line-height: 1.6; height: auto; width: auto; margin: 0; }
+.home-service-row .home-service-code { font-size: 14px; color: #666; }
+.home-service-row ul { display: flex; flex-wrap: wrap; gap: 20px 28px; padding: 0; margin: 0 0 36px; list-style: none; }
+.home-service-row li { font-size: 14px; line-height: 1.6; }
+.home-service-row img { width: 100%; height: 280px; object-fit: cover; }
+.faqs-section .container-13 { align-items: flex-start; height: auto; }
+.faqs-section .left-wrapper { height: auto; min-width: 0; gap: 48px; overflow: visible; }
+.faqs-section .section-title-2, .faqs-section .title-text-4, .faqs-section .h2-7, .faqs-section .section-description-3, .faqs-section .p-103 { height: auto; min-height: 0; width: 100%; }
+.faqs-section .h2-7 { font-size: clamp(36px,4.4vw,64px); line-height: 1.15; letter-spacing: -.04em; margin: 0; }
+.faqs-section .section-title-2 { gap: 24px; }
+.faqs-section .p-103 { line-height: 1.6; margin: 0; }
+.arrow-icon-wrapper { flex: 0 0 32px; width: 32px; height: 32px; border-radius: 50%; color: #111; }
+.arrow-icon-wrapper svg { width: 20px; height: 20px; }
+@media (max-width: 900px) {
+ .home-service-row { grid-template-columns: 1fr 1.3fr; gap: 28px; }
+ .home-service-row img { grid-column: 2; }
+}
+@media (max-width: 599px) {
+ .sections-hero .top-part { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px 8px; }
+ .sections-hero .top-part a { max-width: 100%; width: 100%; padding: 12px 10px; }
+ .sections-hero .top-part a p { font-size: 11px; white-space: normal; text-align: center; }
+ .home-service-row { grid-template-columns: 1fr; }
+ .home-service-row img { grid-column: auto; height: 280px; }
+}
+
+:global(html[lang="ar"]) .sections-hero .hero-content {
+  transform: translateX(-5vw);
+}
+:global(html[lang="ar"]) :is(.process-card-active, .process-card-inactive) .text-wrapper {
+  align-items: center;
+  text-align: center;
+}
+:global(html[lang="ar"]) :is(.process-card-active, .process-card-inactive) .text-wrapper :is(h2, p) {
+  width: 100%;
+  text-align: center;
 }

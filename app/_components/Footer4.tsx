@@ -19,7 +19,7 @@ export default function Footer4({ slots = [] , locale = "en" }: { slots?: string
                 <h1 className={styles["h1"]}>{t(slots[1] ?? "Ready to Take the Next Step?", locale)}</h1>
               </div>
               <div className={styles["div-18"]}>
-                <a className={styles["variant-7"]} href="/contact">
+                <a className={styles["variant-7"]} href="/free-consultation">
                   <div className={styles["div"]}>
                     <p className={styles["p"]}>{t(slots[2] ?? "Book a Free Consultation", locale)}</p>
                   </div>
@@ -77,7 +77,7 @@ export default function Footer4({ slots = [] , locale = "en" }: { slots?: string
                       <div className={styles["footer-menu-3"]}>
                         <div className={styles["home-6"]}>
                           <div className={styles["p-37"]}>
-                            <a className={styles["a"]} href="/contact">{t(slots[10] ?? "Contact Us", locale)}</a>
+                            <a className={styles["a"]} href="/free-consultation">{t(slots[10] ?? "Contact Us", locale)}</a>
                           </div>
                         </div>
                       </div>

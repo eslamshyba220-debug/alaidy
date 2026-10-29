@@ -3,7 +3,7 @@ import assert from "node:assert/strict"
 // Run against an existing dev or production server. No browser packages required.
 const base = process.env.SITE_URL || "http://localhost:3000"
 
-for (const route of ["/", "/about"]) {
+for (const route of ["/", "/about", "/free-consultation"]) {
   const response = await fetch(new URL(route, base))
   assert.equal(response.status, 200, `${route}: page failed`)
   const html = await response.text()
