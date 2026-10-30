@@ -4092,7 +4092,7 @@
   background-color: rgba(0, 0, 0, 0);
   background-position: 0% 0%;
   border-color: rgb(17, 17, 17);
-  color: rgb(17, 17, 17);
+  color: rgb(255, 255, 255);
   display: block;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -26765,4 +26765,197 @@
 :global(html[lang="ar"]) :is(.process-card-active, .process-card-inactive) .text-wrapper :is(h2, p) {
   width: 100%;
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .service-sections .content-wrapper,
+  .service-sections .text-button-wrapper,
+  .service-sections .text-wrapper-2,
+  .service-sections .we-re-helping-landowners-businesses-and-communities-generate-sustainable-power,
+  .service-sections .we-re-helping-landowners-businesses-and-communities-generate-sustainable-power-and-lasting-value,
+  .service-sections .h3-6,
+  .service-sections .p-74 {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+
+  .service-sections .content-wrapper { gap: 32px; }
+  .service-sections .h3-6 {
+    font-size: clamp(30px, 8vw, 40px);
+    line-height: 1.2;
+    letter-spacing: normal;
+  }
+  .service-sections .p-74 {
+    font-size: 17px;
+    line-height: 1.65;
+    letter-spacing: normal;
+    text-align: start;
+  }
+
+  .variant-7,
+  .variant-7-2,
+  .variant-7-3 {
+    box-sizing: border-box;
+    width: max-content;
+    max-width: 100%;
+    height: auto;
+    min-height: 54px;
+    flex-wrap: nowrap;
+    padding: 14px 20px;
+    overflow: visible;
+    white-space: nowrap;
+  }
+  .variant-7 > div,
+  .variant-7-2 > div,
+  .variant-7-3 > div,
+  .variant-7 p,
+  .variant-7-2 p,
+  .variant-7-3 p {
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    line-height: 1.4;
+  }
+
+  .process-sections .section-title-block,
+  .process-sections .title-text-2,
+  .process-sections .h2-3,
+  .process-sections .section-description,
+  .process-sections .p-75,
+  .process-sections .process-card,
+  .process-sections .div-67,
+  .process-sections .div-68,
+  .process-sections .div-69,
+  .process-sections .process-card-active,
+  .process-sections .process-card-inactive,
+  .process-sections .right-content-wrapper,
+  .process-sections .right-content-wrapper-2 {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+  .process-sections .h2-3 {
+    font-size: clamp(36px, 9vw, 44px);
+    line-height: 1.2;
+    letter-spacing: normal;
+  }
+  .process-sections .process-card {
+    align-items: stretch;
+    gap: 40px;
+  }
+  .process-sections .process-card-active,
+  .process-sections .process-card-inactive {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+  }
+  .process-sections :is(.button, .button-2) {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    min-height: 60px;
+    flex: 0 1 auto;
+    gap: 12px;
+    padding: 6px 16px 6px 6px;
+    overflow: visible;
+  }
+  .process-sections .number { flex: 0 0 48px; }
+  .process-sections :is(.site-planning-approval, .site-planning-approval-2) {
+    width: auto;
+    min-width: 0;
+    height: auto;
+    flex: 1 1 0;
+    overflow: visible;
+    white-space: normal;
+  }
+  .process-sections :is(.p-16, .p-19) {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    white-space: normal;
+  }
+  .process-sections .line-wrapper { display: none; }
+
+  .solutions-section .h2-4 {
+    font-size: clamp(32px, 8vw, 40px);
+    line-height: 1.2;
+    letter-spacing: normal;
+  }
+  .solutions-section .p-76 {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    line-height: 1.65;
+    letter-spacing: normal;
+    white-space: normal;
+  }
+  .solutions-section .p-76 > span {
+    display: inline;
+    width: auto;
+    height: auto;
+    letter-spacing: inherit;
+    line-height: inherit;
+    white-space: normal;
+  }
+
+  .desktop .footer-cta-content-wrapper,
+  .desktop .cta-content-wrapper,
+  .desktop .let-s-plan-your-dream-getaway,
+  .desktop .h1 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .desktop .footer-cta-content-wrapper { gap: 56px; }
+  .desktop .cta-content-wrapper { gap: 24px; }
+  .desktop .h1 {
+    font-size: clamp(30px, 8vw, 40px);
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+  }
+}
+
+:global(html[lang="ar"]) .process-sections :is(.button, .button-2) {
+  padding-inline: 16px;
+}
+
+:global(html[lang="ar"]) .solutions-section .p-76 {
+  line-height: 1.75;
+}
+
+@media (max-width: 767px) {
+  :global(html[lang="ar"]) .desktop .bottombar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: stretch;
+    gap: 12px 16px;
+    direction: rtl;
+  }
+  :global(html[lang="ar"]) .desktop .privacy-policy { grid-column: 1; grid-row: 1; }
+  :global(html[lang="ar"]) .desktop .terms-of-use { grid-column: 2; grid-row: 1; }
+  :global(html[lang="ar"]) .desktop [class*="2000-2021-all-rights-reserved"] {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    max-width: 100%;
+    text-align: start;
+  }
+  :global(html[lang="ar"]) .desktop :is(.privacy-policy, .terms-of-use) {
+    justify-self: start;
+  }
+  :global(html[lang="ar"]) .desktop .bottombar :is(.p-47, .p-49, .p-48, .a-2) {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    white-space: normal;
+    line-height: 1.7;
+  }
+  :global(html[lang="ar"]) .desktop p { line-height: 1.7; }
 }
