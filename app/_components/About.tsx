@@ -532,12 +532,7 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                     <div className={styles["div-6"]}>
                       <div className={styles["div-172"]}>
                         <h2 className={styles["h2-8"]}>
-                          <span className={styles["span-76"]}>{t(slots[81] ?? "UAE business", locale)}</span>
-                          {t("and ", locale)}
-                          <div className={styles["span-76"]}>
-                            <br className={styles["span-76"]} />
-                          </div>
-                          {t("banking experts", locale)}
+                          {t(slots[81] ?? "UAE business and banking experts", locale)}
                         </h2>
                       </div>
                     </div>
