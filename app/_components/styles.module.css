@@ -25962,7 +25962,6 @@
   .about-hero-title {
     font-size: clamp(48px, 12vw, 72px);
     line-height: 1.08;
-    text-shadow: 0 2px 18px rgb(0 0 0 / 42%);
   }
   .description,
   .p-71 { width: 100%; height: auto; line-height: 1.65; }
@@ -26216,10 +26215,6 @@
 
   .hero-content {
     gap: 24px;
-    text-shadow: 0 2px 10px rgb(0 0 0 / 55%);
-  }
-  .hero-content :is(.h1-3, .description, .p-71) {
-    text-shadow: 0 2px 10px rgb(0 0 0 / 65%);
   }
   .h1-3 {
     font-size: clamp(32px, 8.5vw, 40px);
@@ -26934,28 +26929,102 @@
 
 @media (max-width: 767px) {
   :global(html[lang="ar"]) .desktop .bottombar {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    justify-items: stretch;
-    gap: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
     direction: rtl;
   }
-  :global(html[lang="ar"]) .desktop .privacy-policy { grid-column: 1; grid-row: 1; }
-  :global(html[lang="ar"]) .desktop .terms-of-use { grid-column: 2; grid-row: 1; }
+  :global(html[lang="ar"]) .desktop .privacy-policy {
+    order: 0;
+  }
+  :global(html[lang="ar"]) .desktop .terms-of-use {
+    order: 1;
+  }
   :global(html[lang="ar"]) .desktop [class*="2000-2021-all-rights-reserved"] {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    max-width: 100%;
-    text-align: start;
+    order: 2;
   }
   :global(html[lang="ar"]) .desktop :is(.privacy-policy, .terms-of-use) {
-    justify-self: start;
+    align-self: flex-start;
+    width: auto;
+    min-width: 0;
+    height: auto;
+    white-space: normal;
+  }
+  :global(html[lang="ar"]) .desktop [class*="2000-2021-all-rights-reserved"] {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    white-space: normal;
+    text-align: start;
   }
   :global(html[lang="ar"]) .desktop .bottombar :is(.p-47, .p-49, .p-48, .a-2) {
+    display: block;
     width: auto;
     max-width: 100%;
     height: auto;
     white-space: normal;
     line-height: 1.7;
   }
+  :global(html[lang="ar"]) .desktop .bottombar {
+    overflow: visible;
+  }
+  :global(html[lang="ar"]) .desktop .bottombar > div {
+    position: relative;
+    inset: auto;
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
   :global(html[lang="ar"]) .desktop p { line-height: 1.7; }
+
+  :global(html[lang="ar"]) .sections-hero .hero-content {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    transform: none;
+    text-align: center;
+  }
+  :global(html[lang="ar"]) .sections-hero .top-part {
+    justify-items: center;
+  }
+  :global(html[lang="ar"]) .sections-hero :is(.content-4, .tag-section, .h1-2, .paragraph) {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  :global(html[lang="ar"]) .sections-hero :is(.p-69, .p-70, .h1-3, .p-71) {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    text-shadow: none;
+  }
+  :global(html[lang="ar"]) .sections-hero,
+  :global(html[lang="ar"]) .sections-hero * {
+    text-shadow: none;
+  }
+
+  .google-reviews-link {
+    box-sizing: border-box;
+    width: max-content;
+    max-width: 100%;
+    height: auto;
+    min-height: 54px;
+    flex: 0 1 auto;
+    padding: 10px 14px;
+    overflow: visible;
+  }
+  .google-reviews-link .label {
+    width: auto;
+    min-width: 0;
+    height: auto;
+    flex: 0 1 auto;
+    white-space: normal;
+  }
+  .google-reviews-link .p-102 {
+    width: auto;
+    height: auto;
+    font-size: clamp(11px, 3.4vw, 14px);
+    line-height: 1.4;
+    white-space: nowrap;
+  }
 }
