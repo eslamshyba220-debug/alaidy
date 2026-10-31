@@ -27028,3 +27028,69 @@
     white-space: nowrap;
   }
 }
+
+@media (max-width: 767px) {
+  .main .stats {
+    padding-block: 132px 72px;
+  }
+  .main .stats .l-alt {
+    align-items: center;
+    gap: 8px;
+  }
+  .main .stats .counter-2 {
+    width: 142px;
+    min-width: 142px;
+    flex: 0 0 142px;
+    justify-content: center;
+  }
+  .main .stats .texts-3 {
+    min-width: 0;
+    flex: 1 1 0;
+  }
+  .main .stats .p-59 {
+    font-size: clamp(30px, 11vw, 38px);
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  .about-2 .step,
+  .about-2 .01,
+  .about-2 .h3-3 {
+    width: auto;
+    min-width: 48px;
+  }
+  .about-2 .01,
+  .about-2 .h3-3 {
+    direction: ltr;
+    text-align: center;
+    unicode-bidi: isolate;
+    white-space: nowrap;
+  }
+  .faqs-section .cta-button-2 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .faqs-section .solid-black-2 {
+    box-sizing: border-box;
+    width: fit-content;
+    min-width: min(250px, 100%);
+    max-width: 100%;
+    height: auto;
+    min-height: 54px;
+    justify-content: space-between;
+    padding: 8px 12px;
+    overflow: visible;
+  }
+  .faqs-section .div-41,
+  .faqs-section .p-68 {
+    width: max-content;
+    height: auto;
+    white-space: nowrap;
+  }
+  .faqs-section .p-68 {
+    line-height: 1.4;
+  }
+}

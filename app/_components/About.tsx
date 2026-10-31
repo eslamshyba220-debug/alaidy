@@ -617,8 +617,16 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                         </div>
                         <div className={styles["title-text-4"]}>
                           <h2 className={styles["h2-10"]}>
-                            <span className={styles["span-76"]}>{t(slots[85] ?? "Your", locale)}</span>
-                            {t("Question Answered", locale)}
+                            {locale === "ar" ? (
+                              <span className={styles["span-76"]} dir="rtl">
+                                {t("Questions Answered", locale)}
+                              </span>
+                            ) : (
+                              <>
+                                <span className={styles["span-76"]}>{t(slots[85] ?? "Your", locale)}</span>
+                                {t("Question Answered", locale)}
+                              </>
+                            )}
                           </h2>
                         </div>
                         <div className={styles["section-description-3"]}>
