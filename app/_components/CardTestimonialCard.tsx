@@ -1,9 +1,9 @@
 import { t, type Locale } from "../_lib/i18n"
 import styles from "./styles.module.css"
-import { SvgGraphic } from "./RichText"
 import Google2 from "./Google2"
 
 export default function CardTestimonialCard({ slots = [] , locale = "en" }: { slots?: string[] ; locale?: Locale }) {
+  const reviewerName = t(slots[6] ?? "Mohamed Mady", locale)
   return (
       <div className={styles["primary"]}>
         <div className={styles["div-11"]}>
@@ -43,15 +43,17 @@ export default function CardTestimonialCard({ slots = [] , locale = "en" }: { sl
         <div className={styles["bottom"]}>
           <div className={styles["image-text"]}>
             <div className={styles["image-3"]}>
-              <div className={styles["google-review-badge"]}>
-                <SvgGraphic className={styles["svg-3"]} html={t("<svg class=\"framer-NrnsD framer-tv8btq\" role=\"presentation\" viewBox=\"0 0 24 24\" style=\"--1m973uw: rgb(244, 178, 60); --js9iwy: 2; opacity: 1;\" data-f2c-idx=\"768\"><use href=\"#559087864\" data-f2c-idx=\"769\"></use></svg>", locale)} />
+              <div className={styles["reviewer-avatar"]} aria-label={reviewerName}>
+                <span aria-hidden="true">{Array.from(reviewerName)[0]}</span>
+                <div className={styles["reviewer-google-mark"]} aria-hidden="true">
                 <Google2 locale={locale} />
+                </div>
               </div>
             </div>
             <div className={styles["text-3"]}>
               <div className={styles["top"]}>
                 <div className={styles["text-4"]}>
-                  <h4 className={styles["h4"]}>{t(slots[6] ?? "Mohamed Mady", locale)}</h4>
+                  <h4 className={styles["h4"]}>{reviewerName}</h4>
                 </div>
               </div>
               <div className={styles["bottom-2"]}>

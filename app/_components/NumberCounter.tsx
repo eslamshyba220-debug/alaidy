@@ -9,7 +9,7 @@ export default function NumberCounter({ slots = [] , locale = "en" }: { slots?: 
           <div className={styles["icon"]}>
             <div className={styles["div-5"]}>
               <div className={styles["div-6"]}>
-                <ServiceIcon kind={slots[0] === "Access Across 18 Banks" ? "wrench" : slots[0] === "End-to-End Guidance" ? "check" : "shield"} />
+                <ServiceIcon kind={slots[0] === "Access Across 18+ Banks" ? "bank" : slots[0] === "End-to-End Guidance" ? "check" : "shield"} />
               </div>
             </div>
           </div>

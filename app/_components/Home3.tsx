@@ -54,34 +54,10 @@ import HighlighterTag32 from "./HighlighterTag32"
 import HighlighterTag33 from "./HighlighterTag33"
 import StatsCard from "./StatsCard"
 import StatsCard2 from "./StatsCard2"
+import BankLogos from "./BankLogos"
+import SiteTicker from "./SiteTicker"
 
 export default function Home3({ slots = [] , locale = "en" }: { slots?: string[] ; locale?: Locale }) {
-  const bankLogos = [
-    { src: slots[71] ?? "https://framerusercontent.com/images/NrHS3yewoKKOMJdIjggszmVP0ak.png?scale-down-to=512&width=800&height=210", item: "li", logo: "logo-01", wrapper: "div-58", image: "img-13" },
-    { src: slots[72] ?? "https://framerusercontent.com/images/VVQEYMZAC3TUbf7H7LwelOAG6mk.png?width=250&height=99", item: "li-2", logo: "logo-02", wrapper: "div-59", image: "img-14" },
-    { src: slots[73] ?? "https://framerusercontent.com/images/bBDK6cY8vU7hNGIxxLHtH62BTQo.png?scale-down-to=512&width=800&height=470", item: "li-3", logo: "logo-03", wrapper: "div-60", image: "img-15" },
-    { src: slots[74] ?? "https://framerusercontent.com/images/5dfXrcGwKVK8zKsMME1od7hSoU.png?scale-down-to=512&width=535&height=186", item: "li-4", logo: "logo-04", wrapper: "div-61", image: "img-16" },
-    { src: slots[75] ?? "https://framerusercontent.com/images/Y06hEq9T9JMTwhLZZ1FASzUjzo.png?scale-down-to=512&width=800&height=269", item: "li-5", logo: "logo-05", wrapper: "div-62", image: "img-17" },
-    { src: slots[76] ?? "https://framerusercontent.com/images/GrIJ0BTBKkNHJJkQs56slXHPpU.png?width=270&height=88", item: "li-6", logo: "logo-06", wrapper: "div-63", image: "img-18" },
-    { src: slots[77] ?? "https://framerusercontent.com/images/R0LVh8JU9YRGLdt6mUOM2jLsS4.png?scale-down-to=512&width=800&height=279", item: "li-7", logo: "logo-07", wrapper: "div-64", image: "img-19" },
-    { src: slots[78] ?? "https://framerusercontent.com/images/GfANrxCivyQ3lV5x7HmbsoA3zOw.png?width=800&height=93", item: "li-7", logo: "logo-07", wrapper: "div-64", image: "img-20" },
-  ]
-  const renderBankLogoSet = (key: string, decorative = false) => (
-    <div className={styles["bank-logo-set"]} key={key} aria-hidden={decorative}>
-      <ul className={styles["ul-7"]}>
-        {bankLogos.map((logo, index) => (
-          <li className={styles[logo.item]} key={`${key}-${index}`}>
-            <div className={styles[logo.logo]}>
-              <div className={styles[logo.wrapper]}>
-                <img className={styles[logo.image]} src={logo.src} alt="" />
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
-
   return (
     <>
       <RevealWatcher />
@@ -365,7 +341,7 @@ export default function Home3({ slots = [] , locale = "en" }: { slots?: string[]
                     <div className={styles["content-5"]}>
                       <div className={styles["top-5"]}>
                         <div className={styles["text-17"] + " " + styles["rv-2"]} data-reveal>
-                          <p className={styles["p-72"]}>{t(slots[69] ?? "Based in Dubai, Al Aidy Group brings together Al Aidy Marketing Management, established in 2021, and Al Aidy Solutions & Services, launched in 2025 to expand the Group’s capabilities and help businesses grow. With more than 16 years of combined banking experience and access to solutions across 18 UAE banks, we support individuals and businesses with banking, finance, mortgages, business services, and digital growth.", locale)}</p>
+                          <p className={styles["p-72"]}>{t(slots[69] ?? "Based in Dubai, Al Aidy Group began operations in 2021 and expanded in 2025 with the launch of Al Aidy Solutions & Services to grow the Group's capabilities and help businesses grow. With more than 16 years of combined banking experience and access to solutions across 18+ UAE banks, we support individuals and businesses with banking, finance, mortgages, business services, and digital growth.", locale)}</p>
                         </div>
                       </div>
                       <div className={styles["bottom-5"]}>
@@ -381,7 +357,7 @@ export default function Home3({ slots = [] , locale = "en" }: { slots?: string[]
                         </div>
                         <div className={styles["div-6"]}>
                           <div className={styles["div-57"]}>
-                            <Stats locale={locale} slots={["400+","400+","trusted partners"]} />
+                            <Stats locale={locale} slots={["400+","400+","Trusted Partners"]} />
                           </div>
                         </div>
                       </div>
@@ -396,7 +372,7 @@ export default function Home3({ slots = [] , locale = "en" }: { slots?: string[]
                   </div>
                   <div className={styles["div-6"]}>
                     <div className={styles["stat-card-2"]}>
-                      <NumberCounter locale={locale} slots={["Access Across 18 Banks","Explore a wider range of solutions through our UAE banking network."]} />
+                      <NumberCounter locale={locale} slots={["Access Across 18+ Banks","Explore a wider range of solutions through our UAE banking network."]} />
                     </div>
                   </div>
                   <div className={styles["div-6"]}>
@@ -407,23 +383,7 @@ export default function Home3({ slots = [] , locale = "en" }: { slots?: string[]
                 </div>
               </section>
             </div>
-            <section className={styles["bank-logos-section"]}>
-              <div className={styles["container-9"]}>
-                <div className={styles["content-6"]}>
-                  <div className={styles["info-text"] + " " + styles["rv-4"]} data-reveal>
-                    <p className={styles["p-73"]}>{t(slots[70] ?? "Access to Solutions Across Leading UAE Banks", locale)}</p>
-                  </div>
-                  <div className={styles["brand-wrap"]}>
-                    <div className={styles["bank-logo-track"]}>
-                      {renderBankLogoSet("bank-logos")}
-                      {renderBankLogoSet("bank-logos-copy", true)}
-                    </div>
-                  </div>
-                  <div className={styles["left-glow"]} />
-                  <div className={styles["right-glow"]} />
-                </div>
-              </div>
-            </section>
+            <BankLogos locale={locale} />
             <div className={styles["service-sections"]}>
               <div className={styles["background-image-2"]}>
                 <div className={styles["div-65"]}>
@@ -501,17 +461,17 @@ export default function Home3({ slots = [] , locale = "en" }: { slots?: string[]
                 <div className={styles["process-card"] + " " + styles["rv-1"]} data-reveal>
                   <div className={styles["div-6"]}>
                     <div className={styles["div-67"]}>
-                      <ProcessCard locale={locale} slots={["1","Profile Review Session","https://framerusercontent.com/images/wpEJ1UWlF5gcMqEC9MNiESMsIA.webp?width=462&height=476","Understand Your Profile","We review your goals, financial position, documents, and requirements."]} />
+                      <ProcessCard locale={locale} slots={["1","Profile Review","https://framerusercontent.com/images/wpEJ1UWlF5gcMqEC9MNiESMsIA.webp?width=462&height=476","Understand Your Profile","We review your goals, financial position, documents, and requirements."]} />
                     </div>
                   </div>
                   <div className={styles["div-6"]}>
                     <div className={styles["div-68"]}>
-                      <ProcessCard2 locale={locale} slots={["2","Bank Matching Process","https://framerusercontent.com/images/kgndFB14ESSANgRXJMgs5ixPdg.webp?width=462&height=476","Compare and Prepare","We identify suitable options and help prepare the required documentation."]} />
+                      <ProcessCard2 locale={locale} slots={["2","Bank Matching","https://framerusercontent.com/images/kgndFB14ESSANgRXJMgs5ixPdg.webp?width=462&height=476","Compare and Prepare","We identify suitable options and help prepare the required documentation."]} />
                     </div>
                   </div>
                   <div className={styles["div-6"]}>
                     <div className={styles["div-69"]}>
-                      <ProcessCard locale={locale} slots={["3","Application Follow Up","https://framerusercontent.com/images/wFGEVv94h0RxpPMAvB07csiSSw.webp?width=462&height=476","Submit and Follow Up","We support your application and keep you informed throughout the process."]} />
+                      <ProcessCard locale={locale} slots={["3","Application Follow-Up","https://framerusercontent.com/images/wFGEVv94h0RxpPMAvB07csiSSw.webp?width=462&height=476","Submit and Follow Up","We support your application and keep you informed throughout the process."]} />
                     </div>
                   </div>
                   <div className={styles["line-wrapper"]}>
@@ -579,6 +539,7 @@ export default function Home3({ slots = [] , locale = "en" }: { slots?: string[]
                   </div>
                   <div className={styles["div-6"]}>
                     <div className={styles["section-description-2"]}>
+                      <h2 className={styles["testimonials-heading"]}>{t("What Our Clients Say", locale)}</h2>
                       <p className={styles["p-101"]}>{t(slots[165] ?? "Real experiences from clients who trusted Al Aidy Group with their business and financial goals.", locale)}</p>
                     </div>
                   </div>
@@ -601,12 +562,12 @@ export default function Home3({ slots = [] , locale = "en" }: { slots?: string[]
                     </li>
                     <li className={styles["li-8"]}>
                       <div className={styles["div-126"]}>
-                        <CardTestimonialCard locale={locale} slots={["https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","“Al Aidy Marketing Management was honest, professional, and reliable, making the entire experience smooth and trusted.”","hazem abdel aleem","Marketing Client"]} />
+                        <CardTestimonialCard locale={locale} slots={["https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","“Al Aidy Marketing Management was honest, professional, and reliable, making the entire experience smooth and trusted.”","Hazem Abdel Aleem","Marketing Client"]} />
                       </div>
                     </li>
                     <li className={styles["li-8"]}>
                       <div className={styles["div-126"]}>
-                        <CardTestimonialCard locale={locale} slots={["https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","“Al Aidy Group delivered clear communication, professional support, and reliable service that exceeded my expectations.”","omario","Business Client"]} />
+                        <CardTestimonialCard locale={locale} slots={["https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","“Al Aidy Group delivered clear communication, professional support, and reliable service that exceeded my expectations.”","Omario","Business Client"]} />
                       </div>
                     </li>
                     <li className={styles["li-8"]}>
@@ -764,30 +725,18 @@ export default function Home3({ slots = [] , locale = "en" }: { slots?: string[]
           </div>
           <div className={styles["div-16"]} />
           <div className={styles["div-131"]} />
-          <div className={styles["ticker-text"]}>
-            <div className={styles["text-01"]}>
-              <p className={styles["p-105"]}>{t(slots[171] ?? "Business, banking, finance, and property support across the UAE.", locale)}</p>
-            </div>
-            <div className={styles["circle"]} />
-            <div className={styles["text-02"]}>
-              <p className={styles["p-106"]}>{t(slots[172] ?? "18 banks. 16+ years of combined banking experience.", locale)}</p>
-            </div>
-            <div className={styles["circle"]} />
-            <div className={styles["text-03"]}>
-              <p className={styles["p-107"]}>{t(slots[173] ?? "Practical guidance for stronger applications and clearer next steps.", locale)}</p>
-            </div>
-          </div>
+          <SiteTicker locale={locale} />
           <div className={styles["div-6"]}>
             <div className={styles["div-132"]}>
               <div className={styles["div-6"]}>
-                <Footer4 locale={locale} slots={["https://framerusercontent.com/images/nuF5MBQa5OHhR97TinwZmRWx23s.webp?width=1344&height=1170","Ready to Take the Next Step?","Book a Free Consultation","https://framerusercontent.com/images/f2noCmvFpCpDTUk11PGBQjkxAY.png?scale-down-to=512&width=3448&height=3076","Your trusted partner for business, banking, finance, mortgages, and digital growth across the UAE.","Main Pages","Home","About","Services","Free Consultation","Contact Us","Services","Business Setup","Business Account Opening","Business Finance","Mortgage Consultancy","Credit Card Advisory","Digital Growth Solutions","Social Media","All banking and financial products are subject to the eligibility criteria, terms, and final approval of the respective bank. Al Aidy Group does not guarantee approval.","Privacy policy","© 2026 Al Aidy Group. All rights reserved.","Terms of Use"]} />
+                <Footer4 locale={locale} slots={["https://framerusercontent.com/images/nuF5MBQa5OHhR97TinwZmRWx23s.webp?width=1344&height=1170","Ready to Take the Next Step?","Book a Free Consultation","https://framerusercontent.com/images/f2noCmvFpCpDTUk11PGBQjkxAY.png?scale-down-to=512&width=3448&height=3076","Your trusted partner for business, banking, finance, mortgages, and digital growth across the UAE.","Main Pages","Home","About","Services","Free Consultation","Contact Us","Services","Business Setup","Business Bank Accounts","Business Finance Support","Mortgage Solutions","Personal Loans","Credit Card Solutions","Digital Growth","Social Media Growth","All banking and financial products are subject to the eligibility criteria, terms, and final approval of the respective bank. Al Aidy Group does not guarantee approval.","Privacy Policy","© 2026 Al Aidy Group. All rights reserved.","Terms of Use"]} />
               </div>
             </div>
           </div>
           <div className={styles["lenis-smooth-scroll"]} />
           <div className={styles["div-6"]}>
             <div className={styles["div-133"]}>
-              <Navigation locale={locale} slots={["https://framerusercontent.com/images/f2noCmvFpCpDTUk11PGBQjkxAY.png?scale-down-to=512&width=3448&height=3076","Home","About","Our Process","Services","free-consultation","https://framerusercontent.com/images/IqSszVDWzGQQfswY7G1XpuEJ8g.svg?width=14&height=19","Contact us"]} />
+              <Navigation locale={locale} slots={["https://framerusercontent.com/images/f2noCmvFpCpDTUk11PGBQjkxAY.png?scale-down-to=512&width=3448&height=3076","Home","About","Our Process","Services","free-consultation","https://framerusercontent.com/images/IqSszVDWzGQQfswY7G1XpuEJ8g.svg?width=14&height=19","Contact Us"]} />
             </div>
           </div>
         </div>

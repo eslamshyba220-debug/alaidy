@@ -280,3 +280,23 @@ html[lang="ar"] :is([dir="ltr"], [lang="en"], a[href^="mailto:"], a[href^="tel:"
 @media (max-width: 767px) {
   html { scroll-padding-top: 90px; }
 }
+
+@media (max-width: 1023px) {
+  html, body { overflow-x: clip; }
+  body { overflow-wrap: anywhere; }
+  img { max-inline-size: 100%; }
+  h1, h2, h3 { text-wrap: balance; }
+  p { line-height: 1.6; }
+}
+
+@media (max-width: 767px) {
+  body { padding-block-end: calc(64px + env(safe-area-inset-bottom)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}

@@ -52,6 +52,8 @@ import HighlighterTag32 from "./HighlighterTag32"
 import HighlighterTag33 from "./HighlighterTag33"
 import StatsCard from "./StatsCard"
 import StatsCard2 from "./StatsCard2"
+import BankLogos from "./BankLogos"
+import SiteTicker from "./SiteTicker"
 
 export default function About({ slots = [] , locale = "en" }: { slots?: string[] ; locale?: Locale }) {
   return (
@@ -85,7 +87,7 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                       <div className={styles["div-144"]}>
                         <ScrollDownArrow locale={locale} slots={[]} />
                       </div>
-                      <h1 className={styles["about-hero-title"]}>{t("About Al Aidy?", locale)}</h1>
+                      <h1 className={styles["about-hero-title"]}>{t("About Al Aidy Group", locale)}</h1>
                     </div>
                   </div>
                   <div className={styles["bg"]}>
@@ -117,47 +119,7 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                       <div className={styles["div-147"]}>
                         <div className={styles["div-6"]}>
                           <div className={styles["div-148"]}>
-                            <div className={styles["p-108"]}>{locale === "ar" ? t("One Group. Integrated Business and Financial Support.\n\nBased in Dubai, Al With over 16 years of combined banking experience and a network spanning 18 UAE banks, we support individuals and businesses with banking, finance, mortgages, business services, and digital growth.", locale) : <>
-                              <span className={styles["span-43"] + " " + styles["rv-2"]} data-reveal>{t(slots[2] ?? "One", locale)}</span>
-                              <span className={styles["span-44"] + " " + styles["rv-2"]} data-reveal>{t(slots[3] ?? "Group.", locale)}</span>
-                              <span className={styles["span-45"] + " " + styles["rv-2"]} data-reveal>{t(slots[4] ?? "Integrated", locale)}</span>
-                              <span className={styles["span-46"] + " " + styles["rv-2"]} data-reveal>{t(slots[5] ?? "Business", locale)}</span>
-                              <span className={styles["span-47"] + " " + styles["rv-2"]} data-reveal>{t(slots[6] ?? "and", locale)}</span>
-                              <span className={styles["span-48"] + " " + styles["rv-2"]} data-reveal>{t(slots[7] ?? "Financial", locale)}</span>
-                              <span className={styles["span-49"] + " " + styles["rv-2"]} data-reveal>{t(slots[8] ?? "Support.\n\nBased", locale)}</span>
-                              <span className={styles["span-50"] + " " + styles["rv-2"]} data-reveal>{t(slots[9] ?? "in", locale)}</span>
-                              <span className={styles["span-51"] + " " + styles["rv-2"]} data-reveal>{t(slots[10] ?? "Dubai,", locale)}</span>
-                              <span className={styles["span-52"] + " " + styles["rv-2"]} data-reveal>{t(slots[11] ?? "Al", locale)}</span>
-                              <span className={styles["span-53"] + " " + styles["rv-2"]} data-reveal>{t(slots[12] ?? "With", locale)}</span>
-                              <span className={styles["span-54"] + " " + styles["rv-2"]} data-reveal>{t(slots[13] ?? "over", locale)}</span>
-                              <span className={styles["span-55"] + " " + styles["rv-2"]} data-reveal>{slots[14] ?? "16"}</span>
-                              <span className={styles["span-56"] + " " + styles["rv-2"]} data-reveal>{t(slots[15] ?? "years", locale)}</span>
-                              <span className={styles["span-52"] + " " + styles["rv-2"]} data-reveal>{t(slots[16] ?? "of", locale)}</span>
-                              <span className={styles["span-57"] + " " + styles["rv-2"]} data-reveal>{t(slots[17] ?? "combined", locale)}</span>
-                              <span className={styles["span-58"] + " " + styles["rv-2"]} data-reveal>{t(slots[18] ?? "banking", locale)}</span>
-                              <span className={styles["span-59"] + " " + styles["rv-2"]} data-reveal>{t(slots[19] ?? "experience", locale)}</span>
-                              <span className={styles["span-47"] + " " + styles["rv-2"]} data-reveal>{t(slots[20] ?? "and", locale)}</span>
-                              <span className={styles["span-60"] + " " + styles["rv-2"]} data-reveal>{t(slots[21] ?? "a", locale)}</span>
-                              <span className={styles["span-61"] + " " + styles["rv-2"]} data-reveal>{t(slots[22] ?? "network", locale)}</span>
-                              <span className={styles["span-62"] + " " + styles["rv-2"]} data-reveal>{t(slots[23] ?? "spanning", locale)}</span>
-                              <span className={styles["span-55"] + " " + styles["rv-2"]} data-reveal>{slots[24] ?? "18"}</span>
-                              <span className={styles["span-63"] + " " + styles["rv-2"]} data-reveal>{t(slots[25] ?? "UAE", locale)}</span>
-                              <span className={styles["span-64"] + " " + styles["rv-2"]} data-reveal>{t(slots[26] ?? "banks,", locale)}</span>
-                              <span className={styles["span-65"] + " " + styles["rv-2"]} data-reveal>{t(slots[27] ?? "we", locale)}</span>
-                              <span className={styles["span-66"] + " " + styles["rv-2"]} data-reveal>{t(slots[28] ?? "support", locale)}</span>
-                              <span className={styles["span-67"] + " " + styles["rv-2"]} data-reveal style={{ transitionDelay: "52ms" }}>{t(slots[29] ?? "individuals", locale)}</span>
-                              <span className={styles["span-47"] + " " + styles["rv-2"]} data-reveal style={{ transitionDelay: "52ms" }}>{t(slots[30] ?? "and", locale)}</span>
-                              <span className={styles["span-59"] + " " + styles["rv-2"]} data-reveal style={{ transitionDelay: "52ms" }}>{t(slots[31] ?? "businesses", locale)}</span>
-                              <span className={styles["span-68"] + " " + styles["rv-2"]} data-reveal style={{ transitionDelay: "52ms" }}>{t(slots[32] ?? "with", locale)}</span>
-                              <span className={styles["span-69"] + " " + styles["rv-2"]} data-reveal style={{ transitionDelay: "52ms" }}>{t(slots[33] ?? "banking,", locale)}</span>
-                              <span className={styles["span-70"] + " " + styles["rv-2"]} data-reveal style={{ transitionDelay: "52ms" }}>{t(slots[34] ?? "finance,", locale)}</span>
-                              <span className={styles["span-71"] + " " + styles["rv-2"]} data-reveal style={{ transitionDelay: "52ms" }}>{t(slots[35] ?? "mortgages,", locale)}</span>
-                              <span className={styles["span-72"] + " " + styles["rv-2"]} data-reveal style={{ transitionDelay: "52ms" }}>{t(slots[36] ?? "business", locale)}</span>
-                              <span className={styles["span-73"] + " " + styles["rv-2"]} data-reveal style={{ transitionDelay: "52ms" }}>{t(slots[37] ?? "services,", locale)}</span>
-                              <span className={styles["span-47"] + " " + styles["rv-2"]} data-reveal style={{ transitionDelay: "52ms" }}>{t(slots[38] ?? "and", locale)}</span>
-                              <span className={styles["span-74"] + " " + styles["rv-2"]} data-reveal style={{ transitionDelay: "52ms" }}>{t(slots[39] ?? "digital", locale)}</span>
-                              <span className={styles["span-75"]}>{t(slots[40] ?? "growth.", locale)}</span>
-                            </>}</div>
+                            <div className={styles["p-108"]}>{t("Based in Dubai, Al Aidy Group began operations in 2021 and expanded in 2025 with the launch of Al Aidy Solutions & Services to grow the Group's capabilities and help businesses grow. With more than 16 years of combined banking experience and access to solutions across 18+ UAE banks, we support individuals and businesses with banking, finance, mortgages, business services, and digital growth.", locale)}</div>
                           </div>
                         </div>
                       </div>
@@ -301,131 +263,7 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                     </section>
                   </div>
                 </div>
-                <div className={styles["brand-ticker"]}>
-                  <div className={styles["content-8"]}>
-                    <div className={styles["info-text-2"] + " " + styles["rv-4"]} data-reveal>
-                      <p className={styles["p-110"]}>{t(slots[59] ?? "Partnering with the UAE’s Leading Banks", locale)}</p>
-                    </div>
-                    <div className={styles["brand-wrap-2"]}>
-                      <ul className={styles["ul-6"] + " " + styles["rv-5"]} data-reveal>
-                        <li className={styles["li"]}>
-                          <div className={styles["logo-01"]}>
-                            <div className={styles["div-58"]}>
-                              <img className={styles["img-13"]} src={slots[60] ?? "https://framerusercontent.com/images/NrHS3yewoKKOMJdIjggszmVP0ak.png?scale-down-to=512&width=800&height=210"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-2"]}>
-                          <div className={styles["logo-02"]}>
-                            <div className={styles["div-59"]}>
-                              <img className={styles["img-14"]} src={slots[61] ?? "https://framerusercontent.com/images/VVQEYMZAC3TUbf7H7LwelOAG6mk.png?width=250&height=99"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-13"]}>
-                          <div className={styles["logo-03-2"]}>
-                            <div className={styles["div-153"]}>
-                              <img className={styles["img-28"]} src={slots[62] ?? "https://framerusercontent.com/images/bBDK6cY8vU7hNGIxxLHtH62BTQo.png?scale-down-to=512&width=800&height=470"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-14"]}>
-                          <div className={styles["logo-04-2"]}>
-                            <div className={styles["div-154"]}>
-                              <img className={styles["img-29"]} src={slots[63] ?? "https://framerusercontent.com/images/5dfXrcGwKVK8zKsMME1od7hSoU.png?scale-down-to=512&width=535&height=186"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-15"]}>
-                          <div className={styles["logo-05-2"]}>
-                            <div className={styles["div-155"]}>
-                              <img className={styles["img-30"]} src={slots[64] ?? "https://framerusercontent.com/images/Y06hEq9T9JMTwhLZZ1FASzUjzo.png?scale-down-to=512&width=800&height=269"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-16"]}>
-                          <div className={styles["logo-06-2"]}>
-                            <div className={styles["div-156"]}>
-                              <img className={styles["img-31"]} src={slots[65] ?? "https://framerusercontent.com/images/GrIJ0BTBKkNHJJkQs56slXHPpU.png?width=270&height=88"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-7"]}>
-                          <div className={styles["logo-07"]}>
-                            <div className={styles["div-64"]}>
-                              <img className={styles["img-19"]} src={slots[66] ?? "https://framerusercontent.com/images/R0LVh8JU9YRGLdt6mUOM2jLsS4.png?scale-down-to=512&width=800&height=279"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-7"]}>
-                          <div className={styles["logo-07"]}>
-                            <div className={styles["div-64"]}>
-                              <img className={styles["img-20"]} src={slots[67] ?? "https://framerusercontent.com/images/GfANrxCivyQ3lV5x7HmbsoA3zOw.png?scale-down-to=512&width=800&height=93"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li"]}>
-                          <div className={styles["logo-01"]}>
-                            <div className={styles["div-58"]}>
-                              <img className={styles["img-13"]} src={slots[68] ?? "https://framerusercontent.com/images/NrHS3yewoKKOMJdIjggszmVP0ak.png?scale-down-to=512&width=800&height=210"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-2"]}>
-                          <div className={styles["logo-02"]}>
-                            <div className={styles["div-59"]}>
-                              <img className={styles["img-14"]} src={slots[69] ?? "https://framerusercontent.com/images/VVQEYMZAC3TUbf7H7LwelOAG6mk.png?width=250&height=99"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-13"]}>
-                          <div className={styles["logo-03-2"]}>
-                            <div className={styles["div-153"]}>
-                              <img className={styles["img-28"]} src={slots[70] ?? "https://framerusercontent.com/images/bBDK6cY8vU7hNGIxxLHtH62BTQo.png?scale-down-to=512&width=800&height=470"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-14"]}>
-                          <div className={styles["logo-04-2"]}>
-                            <div className={styles["div-154"]}>
-                              <img className={styles["img-29"]} src={slots[71] ?? "https://framerusercontent.com/images/5dfXrcGwKVK8zKsMME1od7hSoU.png?scale-down-to=512&width=535&height=186"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-15"]}>
-                          <div className={styles["logo-05-2"]}>
-                            <div className={styles["div-155"]}>
-                              <img className={styles["img-30"]} src={slots[72] ?? "https://framerusercontent.com/images/Y06hEq9T9JMTwhLZZ1FASzUjzo.png?scale-down-to=512&width=800&height=269"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-16"]}>
-                          <div className={styles["logo-06-2"]}>
-                            <div className={styles["div-156"]}>
-                              <img className={styles["img-31"]} src={slots[73] ?? "https://framerusercontent.com/images/GrIJ0BTBKkNHJJkQs56slXHPpU.png?width=270&height=88"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-7"]}>
-                          <div className={styles["logo-07"]}>
-                            <div className={styles["div-64"]}>
-                              <img className={styles["img-19"]} src={slots[74] ?? "https://framerusercontent.com/images/R0LVh8JU9YRGLdt6mUOM2jLsS4.png?scale-down-to=512&width=800&height=279"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                        <li className={styles["li-7"]}>
-                          <div className={styles["logo-07"]}>
-                            <div className={styles["div-64"]}>
-                              <img className={styles["img-20"]} src={slots[75] ?? "https://framerusercontent.com/images/GfANrxCivyQ3lV5x7HmbsoA3zOw.png?scale-down-to=512&width=800&height=93"} alt="" />
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className={styles["left-glow-2"]} />
-                    <div className={styles["right-glow-2"]} />
-                  </div>
-                </div>
+                <BankLogos locale={locale} />
               </section>
               <section className={styles["stats"]}>
                 <div className={styles["bottom-7"]}>
@@ -580,7 +418,7 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                             </div>
                             <div className={styles["div-6"]}>
                               <div className={styles["div-175"]}>
-                                <StatsCard locale={locale} slots={["18 Banks\nNetwork","We compare suitable banking options to improve clarity, speed, and approval chances."]} />
+                                <StatsCard locale={locale} slots={["18+ UAE Banks\nNetwork","We compare suitable banking options to improve clarity, speed, and approval chances."]} />
                               </div>
                             </div>
                           </div>
@@ -652,30 +490,18 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
           </div>
           <div className={styles["div-16"]} />
           <div className={styles["div-131"]} />
-          <div className={styles["ticker-text"]}>
-            <div className={styles["text-01"]}>
-              <p className={styles["p-105"]}>{t(slots[89] ?? "Business, banking, finance, and property support across the UAE.", locale)}</p>
-            </div>
-            <div className={styles["circle"]} />
-            <div className={styles["text-02"]}>
-              <p className={styles["p-106"]}>{t(slots[90] ?? "18 banks. 16+ years of combined banking experience.", locale)}</p>
-            </div>
-            <div className={styles["circle"]} />
-            <div className={styles["text-03"]}>
-              <p className={styles["p-107"]}>{t(slots[91] ?? "Practical guidance for stronger applications and clearer next steps.", locale)}</p>
-            </div>
-          </div>
           <div className={styles["div-6"]}>
             <div className={styles["div-132"]}>
               <div className={styles["div-6"]}>
-                <Footer4 locale={locale} slots={["https://framerusercontent.com/images/nuF5MBQa5OHhR97TinwZmRWx23s.webp?width=1344&height=1170","Ready to Take the Next Step?","Book a Free Consultation","https://framerusercontent.com/images/f2noCmvFpCpDTUk11PGBQjkxAY.png?scale-down-to=512&width=3448&height=3076","Your trusted partner for business, banking, finance, mortgages, and digital growth across the UAE.","Main Pages","Home","About","Services","Free Consultation","Contact Us","Services","Business Setup","Business Account Opening","Business Finance","Mortgage Consultancy","Credit Card Advisory","Digital Growth Solutions","Social Media","All banking and financial products are subject to the eligibility criteria, terms, and final approval of the respective bank. Al Aidy Group does not guarantee approval.","Privacy policy","© 2026 Al Aidy Group. All rights reserved.","Terms of Use"]} />
+                <SiteTicker locale={locale} />
+                <Footer4 locale={locale} slots={["https://framerusercontent.com/images/nuF5MBQa5OHhR97TinwZmRWx23s.webp?width=1344&height=1170","Ready to Take the Next Step?","Book a Free Consultation","https://framerusercontent.com/images/f2noCmvFpCpDTUk11PGBQjkxAY.png?scale-down-to=512&width=3448&height=3076","Your trusted partner for business, banking, finance, mortgages, and digital growth across the UAE.","Main Pages","Home","About","Services","Free Consultation","Contact Us","Services","Business Setup","Business Bank Accounts","Business Finance","Mortgage Consultancy","Personal Loans","Credit Card Solutions","Digital Growth","Social Media Growth","All banking and financial products are subject to the eligibility criteria, terms, and final approval of the respective bank. Al Aidy Group does not guarantee approval.","Privacy Policy","© 2026 Al Aidy Group. All rights reserved.","Terms of Use"]} />
               </div>
             </div>
           </div>
           <div className={styles["lenis-smooth-scroll-2"]} />
           <div className={styles["div-6"]}>
             <div className={styles["div-177"]}>
-              <Navigation locale={locale} slots={["https://framerusercontent.com/images/f2noCmvFpCpDTUk11PGBQjkxAY.png?scale-down-to=512&width=3448&height=3076","Home","About","Our Process","Services","free-consultation","https://framerusercontent.com/images/IqSszVDWzGQQfswY7G1XpuEJ8g.svg?width=14&height=19","Contact us"]} />
+              <Navigation locale={locale} slots={["https://framerusercontent.com/images/f2noCmvFpCpDTUk11PGBQjkxAY.png?scale-down-to=512&width=3448&height=3076","Home","About","Our Process","Services","free-consultation","https://framerusercontent.com/images/IqSszVDWzGQQfswY7G1XpuEJ8g.svg?width=14&height=19","Contact Us"]} />
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import styles from "./styles.module.css"
 import Facebook from "./Facebook"
 import Tiktok from "./Tiktok"
 import Instagram from "./Instagram"
+import { COMPANY_WHATSAPP } from "../_lib/consultation"
 
 export default function Footer4({ slots = [] , locale = "en" }: { slots?: string[] ; locale?: Locale }) {
   return (
@@ -39,6 +40,18 @@ export default function Footer4({ slots = [] , locale = "en" }: { slots?: string
                       <p className={styles["p-31"]}>{t(slots[4] ?? "Your trusted partner for business, banking, finance, mortgages, and digital growth across the UAE.", locale)}</p>
                     </div>
                   </div>
+                  <address className={styles["footer-contact"]}>
+                    <h2>{t("Contact Us", locale)}</h2>
+                    <a href="https://maps.google.com/?q=Office+303-275,+Westburry+Tower-1,+Dubai,+UAE" target="_blank" rel="noopener noreferrer">
+                      {t("Office 303-275, Westburry Tower-1, Dubai, UAE", locale)}
+                    </a>
+                    <a dir="ltr" href="tel:+97142322774">+971 4 2322774</a>
+                    <a dir="ltr" href="mailto:contact@alaidygroup.com">contact@alaidygroup.com</a>
+                    <a dir="ltr" href="https://www.alaidygroup.com">www.alaidygroup.com</a>
+                    <a dir="ltr" href={`https://wa.me/${COMPANY_WHATSAPP}`} target="_blank" rel="noopener noreferrer">
+                      {locale === "ar" ? "واتساب" : "WhatsApp"}
+                    </a>
+                  </address>
                 </div>
                 <div className={styles["footer-menu-wrapper"]}>
                   <div className={styles["footer-menu"]}>
@@ -91,39 +104,44 @@ export default function Footer4({ slots = [] , locale = "en" }: { slots?: string
                       <div className={styles["menu-wrapper-2"]}>
                         <div className={styles["footer-menu-5"]}>
                           <div className={styles["home-7"]}>
-                            <p className={styles["p-39"]}>{t(slots[12] ?? "Business Setup", locale)}</p>
+                            <a className={styles["footer-service-link"]} href="/#business-setup">{t(slots[12] ?? "Business Setup", locale)}</a>
                           </div>
                         </div>
                         <div className={styles["footer-menu-5"]}>
                           <div className={styles["home-8"]}>
-                            <p className={styles["p-40"]}>{t(slots[13] ?? "Business Account Opening", locale)}</p>
+                            <a className={styles["footer-service-link"]} href="/#business-banking">{t(slots[13] ?? "Business Banking Support", locale)}</a>
                           </div>
                         </div>
                         <div className={styles["footer-menu-5"]}>
                           <div className={styles["home-9"]}>
-                            <p className={styles["p-41"]}>{t(slots[14] ?? "Business Finance", locale)}</p>
+                            <a className={styles["footer-service-link"]} href="/#business-finance">{t(slots[14] ?? "Business Finance Support", locale)}</a>
                           </div>
                         </div>
                         <div className={styles["footer-menu-5"]}>
                           <div className={styles["home-10"]}>
-                            <p className={styles["p-42"]}>{t(slots[15] ?? "Mortgage Consultancy", locale)}</p>
+                            <a className={styles["footer-service-link"]} href="/#mortgage-solutions">{t(slots[15] ?? "Mortgage Solutions", locale)}</a>
                           </div>
                         </div>
                         <div className={styles["footer-menu-5"]}>
                           <div className={styles["home-11"]}>
-                            <p className={styles["p-43"]}>{t(slots[16] ?? "Credit Card Advisory", locale)}</p>
+                            <a className={styles["footer-service-link"]} href="/#personal-loans">{t(slots[16] ?? "Personal Loans", locale)}</a>
                           </div>
                         </div>
                         <div className={styles["footer-menu-5"]}>
                           <div className={styles["home-12"]}>
-                            <p className={styles["p-44"]}>{t(slots[17] ?? "Digital Growth Solutions", locale)}</p>
+                            <a className={styles["footer-service-link"]} href="/#credit-card-solutions">{t(slots[17] ?? "Credit Card Solutions", locale)}</a>
+                          </div>
+                        </div>
+                        <div className={styles["footer-menu-5"]}>
+                          <div className={styles["home-12"]}>
+                            <a className={styles["footer-service-link"]} href="/#digital-growth">{t(slots[18] ?? "Digital Growth", locale)}</a>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className={styles["social-media-wrapper"]}>
                       <div className={styles["social-media"]}>
-                        <p className={styles["p-45"]}>{t(slots[18] ?? "Social Media", locale)}</p>
+                        <p className={styles["p-45"]}>{t(slots[19] ?? "Social Media", locale)}</p>
                       </div>
                       <div className={styles["social-media-list"]}>
                         <div className={styles["div-21"]}>
@@ -149,20 +167,20 @@ export default function Footer4({ slots = [] , locale = "en" }: { slots?: string
               <div className={styles["bottom-content-wrapper"] + " " + styles["rv-1"]} data-reveal style={{ transitionDelay: "102ms" }}>
                 <div className={styles["bottom-text-wrapper"]}>
                   <div className={styles["banking-approval-disclaimer"]}>
-                    <p className={styles["p-46"]}>{t(slots[19] ?? "All banking and financial products are subject to the eligibility criteria, terms, and final approval of the respective bank. Al Aidy Group does not guarantee approval.", locale)}</p>
+                    <p className={styles["p-46"]}>{t(slots[20] ?? "All banking and financial products are subject to the eligibility criteria, terms, and final approval of the respective bank. Al Aidy Group does not guarantee approval.", locale)}</p>
                   </div>
                   <div className={styles["bottombar"]}>
                     <div className={styles["privacy-policy"]}>
                       <div className={styles["p-47"]}>
-                        <a className={styles["a-2"]} href="/">{t(slots[20] ?? "Privacy policy", locale)}</a>
+                        <a className={styles["a-2"]} href="/">{t(slots[21] ?? "Privacy Policy", locale)}</a>
                       </div>
                     </div>
                     <div className={styles["2000-2021-all-rights-reserved"]}>
-                      <p className={styles["p-48"]}>{t(slots[21] ?? "© 2026 Al Aidy Group. All rights reserved.", locale)}</p>
+                      <p className={styles["p-48"]}>{t(slots[22] ?? "© 2026 Al Aidy Group. All rights reserved.", locale)}</p>
                     </div>
                     <div className={styles["terms-of-use"]}>
                       <div className={styles["p-49"]}>
-                        <a className={styles["a-2"]} href="/">{t(slots[22] ?? "Terms of Use", locale)}</a>
+                        <a className={styles["a-2"]} href="/">{t(slots[23] ?? "Terms of Use", locale)}</a>
                       </div>
                     </div>
                   </div>

@@ -8,18 +8,39 @@ import styles from "./styles.module.css"
 export default function ConsultationForm({ locale }: { locale: Locale }) {
   const [whatsAppUrl, setWhatsAppUrl] = useState("")
   const [popupBlocked, setPopupBlocked] = useState(false)
+  const [errors, setErrors] = useState<Record<string, string>>({})
   const inputs = [
-    { name: "Name", type: "text", placeholder: "John Carter", required: true, autoComplete: "name" },
-    { name: "Phone Number", type: "tel", placeholder: "+1 (555) 234-5678", required: true, autoComplete: "tel" },
-    { name: "Email", type: "email", placeholder: "jane@framer.com", required: true, autoComplete: "email" },
+    { name: "Name", type: "text", placeholder: "Full name", required: true, autoComplete: "name" },
+    { name: "Phone Number", type: "tel", placeholder: "+971 50 123 4567", required: true, autoComplete: "tel", inputMode: "tel" as const },
+    { name: "Email", type: "email", placeholder: "name@example.com", required: true, autoComplete: "email" },
     { name: "Job Title", type: "text", placeholder: "Enter your current job title", autoComplete: "organization-title" },
     { name: "Company Name", type: "text", placeholder: "Enter your company name", autoComplete: "organization" },
   ]
   return (
-    <form className={styles["consultation-form"]} onSubmit={event => {
+    <form className={styles["consultation-form"]} noValidate onSubmit={event => {
       event.preventDefault()
       const form = event.currentTarget
-      if (!form.reportValidity()) return
+      const nextErrors: Record<string, string> = {}
+      const controls = Array.from(form.elements).filter((control): control is HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement =>
+        control instanceof HTMLInputElement || control instanceof HTMLSelectElement || control instanceof HTMLTextAreaElement,
+      )
+      for (const control of controls) {
+        const value = control.value.trim()
+        if (control.required && !value) {
+          nextErrors[control.name] = t("This field is required", locale)
+        } else if (control.name === "Email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          nextErrors[control.name] = t("Please enter a valid email address", locale)
+        } else if (control.name === "Phone Number" && !/^(?:\+971|00971|0)(?:2|3|4|6|7|9|50|52|54|55|56|58)[\s().-]*\d{3}[\s.-]*\d{4}$/.test(value)) {
+          nextErrors[control.name] = t("Please enter a valid UAE phone number", locale)
+        }
+      }
+      setErrors(nextErrors)
+      const firstInvalid = controls.find(control => nextErrors[control.name])
+      if (firstInvalid) {
+        firstInvalid.focus({ preventScroll: true })
+        firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" })
+        return
+      }
       const values = Object.fromEntries(new FormData(form).entries()) as Record<string, string>
       const url = buildConsultationUrl(values, locale)
       setWhatsAppUrl(url)
@@ -34,19 +55,27 @@ export default function ConsultationForm({ locale }: { locale: Locale }) {
       {inputs.map(input => (
         <label key={input.name} className={styles["consultation-field"]}>
           <span>{t(input.name, locale)}</span>
-          <input {...input} dir={input.type === "email" || input.type === "tel" ? "ltr" : undefined}
-            placeholder={locale === "ar" && input.name === "Name" ? "الاسم الكامل" : t(input.placeholder, locale)}
-            minLength={input.type === "tel" ? 7 : undefined} maxLength={input.type === "tel" ? 24 : 160}
-            pattern={input.type === "tel" ? "[\\x2B0-9\\x28\\x29\\x20\\x2E\\x2D]{7,24}" : undefined} />
+          <input
+            {...input}
+            id={`consultation-${input.name.replace(/ /g, "-")}`}
+            dir={input.type === "email" || input.type === "tel" ? "ltr" : undefined}
+            placeholder={t(input.placeholder, locale)}
+            maxLength={input.type === "tel" ? 24 : 160}
+            aria-invalid={Boolean(errors[input.name])}
+            aria-describedby={errors[input.name] ? `error-${input.name.replace(/ /g, "-")}` : undefined}
+          />
+          {errors[input.name] && <span id={`error-${input.name.replace(/ /g, "-")}`} className={styles["consultation-field-error"]} role="alert">{errors[input.name]}</span>}
         </label>
       ))}
       {Object.entries(consultationOptions).map(([name, options]) => (
         <label key={name} className={styles["consultation-field"]}>
           <span>{t(name, locale)}</span>
-          <select name={name} required defaultValue="">
+          <select name={name} required defaultValue="" aria-invalid={Boolean(errors[name])}
+            aria-describedby={errors[name] ? `error-${name.replace(/ /g, "-")}` : undefined}>
             <option value="" disabled>{t(name === "Financing Requirement" ? "Select the service you need" : "Select…", locale)}</option>
             {options.map(option => <option key={option} value={option}>{t(option, locale)}</option>)}
           </select>
+          {errors[name] && <span id={`error-${name.replace(/ /g, "-")}`} className={styles["consultation-field-error"]} role="alert">{errors[name]}</span>}
         </label>
       ))}
       <label className={styles["consultation-field"]}>

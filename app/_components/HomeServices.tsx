@@ -59,7 +59,7 @@ const services = [
       "Application Support"
     ],
     "description": "We review your financial profile, compare available personal loan options, and help you prepare a clear and complete application.",
-    "image": "https://framerusercontent.com/images/Amv4gb9URgX6JqP03sxVdkpxA.webp?width=1850&height=2150"
+    "image": "/images/services/personal-loans.svg"
   },
   {
     "id": "credit-card-solutions",
@@ -71,7 +71,7 @@ const services = [
       "Application Support"
     ],
     "description": "We help you compare credit cards based on fees, benefits, income requirements, and eligibility, so you can make a more informed choice.",
-    "image": "https://framerusercontent.com/images/LvtkipVNiJaJmIL3S5U7WvX2DH0.webp?width=1850&height=2150"
+    "image": "/images/services/credit-cards.svg"
   },
   {
     "id": "digital-growth",
@@ -87,5 +87,29 @@ const services = [
   }
 ]
 export default function HomeServices({locale}: {locale: Locale}) {
-return <div className={styles["home-service-list"]}>{services.map(service => <article key={service.id} className={styles["home-service-row"]}><div><p className={styles["home-service-code"]}>{service.code}</p><h3>{t(service.title, locale)}</h3></div><div><ul>{service.tags.map(tag => <li key={tag}>{t(tag, locale)}</li>)}</ul><p>{t(service.description, locale)}</p></div><img src={service.image} alt={t(service.title, locale)} loading="lazy" /></article>)}</div>
+  return (
+    <div className={styles["home-service-list"]}>
+      {services.map(service => (
+        <article id={service.id} key={service.id} className={styles["home-service-row"]}>
+          <div>
+            <p className={styles["home-service-code"]}>{service.code}</p>
+            <h3>{t(service.title, locale)}</h3>
+          </div>
+          <div>
+            <ul>{service.tags.map(tag => <li key={tag}>{t(tag, locale)}</li>)}</ul>
+            <p>{t(service.description, locale)}</p>
+          </div>
+          <img
+            src={service.image}
+            alt={t(service.title, locale)}
+            width={1850}
+            height={2150}
+            loading="lazy"
+            decoding="async"
+            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 320px"
+          />
+        </article>
+      ))}
+    </div>
+  )
 }

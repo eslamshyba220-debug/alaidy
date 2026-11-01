@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 625" role="img" aria-labelledby="title">
+  <title id="title">Personal loan service image placeholder</title>
+  <rect width="1000" height="625" rx="28" fill="#f3f5f8"/>
+  <circle cx="788" cy="114" r="86" fill="#e1e9f6"/>
+  <rect x="425" y="150" width="300" height="360" rx="26" fill="#fff" stroke="#1f449c" stroke-width="16"/>
+  <path d="M475 230h190M475 282h155M475 334h190" stroke="#d7dfec" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="285" cy="235" r="72" fill="#eb8832"/>
+  <path d="M155 493c14-112 68-169 130-169s116 57 130 169" fill="#1f449c"/>
+  <path d="m500 420 55 54 103-117" fill="none" stroke="#eb8832" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
