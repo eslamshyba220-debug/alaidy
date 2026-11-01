@@ -8,7 +8,7 @@ export default function Badge2({ slots = [] , locale = "en" }: { slots?: string[
           <p className={styles["p-20"]}>{slots[0] ?? "/"}</p>
         </div>
         <div className={styles["market-leaders-label-2"]}>
-          <p className={styles["p-21"]}>{t(slots[1] ?? "Testimonial", locale)}</p>
+          <p className={styles["p-21"]}>{t(slots[1] ?? "Testimonials", locale)}</p>
         </div>
       </div>
   )

@@ -1,7 +1,15 @@
 import { t, type Locale } from "./i18n"
 
-// Company WhatsApp number supplied by the project owner.
-export const COMPANY_WHATSAPP = "97142322774"
+export const WHATSAPP_NUMBER = "97142322774"
+
+export function formatWhatsAppNumber(): string {
+  return WHATSAPP_NUMBER.replace(/^(\d{3})(\d)(\d{3})(\d{4})$/, "+$1 $2 $3 $4")
+}
+
+export function buildWhatsAppContactUrl(locale: Locale): string {
+  const message = t("Hello Al Aidy Group, I would like a free consultation.", locale)
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+}
 
 export const consultationFields = [
   "Name", "Phone Number", "Email", "Job Title", "Company Name",
@@ -20,5 +28,5 @@ export function buildConsultationUrl(values: Record<string, string>, locale: Loc
     const value = values[field]?.trim()
     if (value) lines.push(`${t(field, locale)}: ${t(value, locale)}`)
   }
-  return `https://wa.me/${COMPANY_WHATSAPP}?text=${encodeURIComponent(lines.join("\n"))}`
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`
 }

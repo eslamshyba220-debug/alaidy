@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { usePathname } from "next/navigation"
 import { t, type Locale } from "../_lib/i18n"
+import { formatWhatsAppNumber, WHATSAPP_NUMBER } from "../_lib/consultation"
 import styles from "./styles.module.css"
 import LanguageToggle from "./LanguageToggle"
 
@@ -143,8 +144,8 @@ export default function Navigation({ slots = [], locale = "en" }: { slots?: stri
                 </a>
                 <LanguageToggle locale={locale} />
                 <div className={styles["mobile-quick-links"]}>
-                  <a href="tel:+97142322774">+971 4 2322774</a>
-                  <a href="https://wa.me/97142322774" target="_blank" rel="noopener noreferrer">
+                  <a href={`tel:+${WHATSAPP_NUMBER}`}>{formatWhatsAppNumber()}</a>
+                  <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer">
                     {locale === "ar" ? "واتساب" : "WhatsApp"}
                   </a>
                 </div>

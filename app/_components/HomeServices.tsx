@@ -59,7 +59,7 @@ const services = [
       "Application Support"
     ],
     "description": "We review your financial profile, compare available personal loan options, and help you prepare a clear and complete application.",
-    "image": "/images/services/personal-loans.svg"
+    "image": "/images/services/personal-loans.webp"
   },
   {
     "id": "credit-card-solutions",
@@ -71,7 +71,7 @@ const services = [
       "Application Support"
     ],
     "description": "We help you compare credit cards based on fees, benefits, income requirements, and eligibility, so you can make a more informed choice.",
-    "image": "/images/services/credit-cards.svg"
+    "image": "/images/services/credit-cards.webp"
   },
   {
     "id": "digital-growth",
@@ -100,6 +100,7 @@ export default function HomeServices({locale}: {locale: Locale}) {
             <p>{t(service.description, locale)}</p>
           </div>
           <img
+            className={service.id === "personal-loans" || service.id === "credit-card-solutions" ? styles["home-service-portrait"] : undefined}
             src={service.image}
             alt={t(service.title, locale)}
             width={1850}

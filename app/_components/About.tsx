@@ -38,16 +38,12 @@ import Template2 from "./Template2"
 import SmoothScroll from "./SmoothScroll"
 import HighlighterTag2 from "./HighlighterTag2"
 import ScrollDownArrow from "./ScrollDownArrow"
-import GridLines from "./GridLines"
 import HighlighterTag22 from "./HighlighterTag22"
-import GridLines2 from "./GridLines2"
 import AnimatedNumberCounter3 from "./AnimatedNumberCounter3"
 import AnimatedNumberCounter4 from "./AnimatedNumberCounter4"
-import GridLines3 from "./GridLines3"
 import HighlighterTag3 from "./HighlighterTag3"
 import AboutCard from "./AboutCard"
 import AboutCard2 from "./AboutCard2"
-import GridLines4 from "./GridLines4"
 import HighlighterTag32 from "./HighlighterTag32"
 import HighlighterTag33 from "./HighlighterTag33"
 import StatsCard from "./StatsCard"
@@ -99,11 +95,6 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                         <div className={styles["overlay-2"]} />
                       </div>
                     </div>
-                    <div className={styles["grid-top"]}>
-                      <div className={styles["div-6"]}>
-                        <GridLines locale={locale} slots={[]} />
-                      </div>
-                    </div>
                   </div>
                 </section>
               </div>
@@ -138,11 +129,6 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                 </div>
               </section>
               <section className={styles["gallery"]}>
-                <div className={styles["div-6"]}>
-                  <div className={styles["grid-lines"] + " " + styles["rv-10"]} data-reveal>
-                    <GridLines2 locale={locale} slots={[]} />
-                  </div>
-                </div>
                 <div className={styles["div-150"]}>
                   <div className={styles["images-gallery"]}>
                     <section className={styles["section-4"]}>
@@ -283,11 +269,6 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                     </div>
                   </div>
                 </div>
-                <div className={styles["div-6"]}>
-                  <div className={styles["grid"]}>
-                    <GridLines3 locale={locale} slots={[]} />
-                  </div>
-                </div>
                 <div className={styles["bg-imge"] + " " + styles["rv-12"]} data-reveal>
                   <div className={styles["div-159"]}>
                     <img className={styles["img-32"]} src={slots[76] ?? "https://framerusercontent.com/images/DCPNSTOdjZ89Emy5jJOCW8udGhM.webp?scale-down-to=4096&width=4672&height=7008"} alt="" />
@@ -302,7 +283,7 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                       <div className={styles["div-161"]}>
                         <div className={styles["div-6"]}>
                           <div className={styles["div-162"] + " " + styles["rv-2"]} data-reveal>
-                            <HighlighterTag3 locale={locale} slots={["Our mission"]} />
+                                  <HighlighterTag3 locale={locale} slots={["Our Mission"]} />
                           </div>
                         </div>
                         <div className={styles["line-5"]} />
@@ -331,15 +312,10 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                       </div>
                       <div className={styles["div-6"]}>
                         <div className={styles["div-164"] + " " + styles["rv-2"]} data-reveal style={{ transitionDelay: "183ms" }}>
-                          <AboutCard2 locale={locale} slots={["03","https://framerusercontent.com/images/HSIJ8kUc149TMXFFk4DETPt0.webp?scale-down-to=512&width=1350&height=1250","Grow with support","From funding and mortgage consultancy to digital growth, we stay beside you with practical solutions that help your business move forward."]} />
+                          <AboutCard2 locale={locale} slots={["03","https://framerusercontent.com/images/HSIJ8kUc149TMXFFk4DETPt0.webp?scale-down-to=512&width=1350&height=1250","Grow with Confidence","From funding and expansion to digital growth, we deliver practical solutions that help your business move forward."]} />
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className={styles["div-6"]}>
-                  <div className={styles["grid-lines-2"]}>
-                    <GridLines4 locale={locale} slots={[]} />
                   </div>
                 </div>
               </section>
@@ -362,7 +338,7 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                     <div className={styles["div-170"]}>
                       <div className={styles["div-6"]}>
                         <div className={styles["div-171"] + " " + styles["rv-2"]} data-reveal>
-                          <HighlighterTag32 locale={locale} slots={["Why us"]} />
+                          <HighlighterTag32 locale={locale} slots={["Why Us"]} />
                         </div>
                       </div>
                       <div className={styles["line-6"]} />
@@ -382,7 +358,7 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                           <div className={styles["title-2"]}>
                             <div className={styles["div-6"]}>
                               <div className={styles["div-173"] + " " + styles["rv-2"]} data-reveal>
-                                <HighlighterTag33 locale={locale} slots={["Why clients choose us"]} />
+                                <HighlighterTag33 locale={locale} slots={["Why Clients Choose Us"]} />
                               </div>
                             </div>
                             <div className={styles["heading-5"]}>
@@ -393,7 +369,7 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                           </div>
                           <div className={styles["container-16"]}>
                             <div className={styles["content-12"]}>
-                              <p className={styles["p-112"]}>{t(slots[83] ?? "Choosing the right partner matters — we simplify business setup, banking, funding, and investment decisions with clear guidance from start to growth.", locale)}</p>
+                                    <p className={styles["p-112"]}>{t(slots[83] ?? "We help entrepreneurs, business owners, and investors make confident financial decisions with clear guidance from start to finish.", locale)}</p>
                             </div>
                           </div>
                         </div>
@@ -418,19 +394,19 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
                             </div>
                             <div className={styles["div-6"]}>
                               <div className={styles["div-175"]}>
-                                <StatsCard locale={locale} slots={["18+ UAE Banks\nNetwork","We compare suitable banking options to improve clarity, speed, and approval chances."]} />
+                                <StatsCard locale={locale} slots={["18+ UAE Banks\nNetwork","We compare options across our network of UAE banks to find the right fit for your profile, faster."]} />
                               </div>
                             </div>
                           </div>
                           <div className={styles["bottom-card"] + " " + styles["rv-2"]} data-reveal style={{ transitionDelay: "564ms" }}>
                             <div className={styles["div-6"]}>
                               <div className={styles["div-176"]}>
-                                <StatsCard2 locale={locale} slots={["500M+ AED\nTransactions","We support major financial decisions, from business funding to property investment growth."]} />
+                                <StatsCard2 locale={locale} slots={["500M+ AED\nTransactions","Over AED 500 million in financing and banking solutions supported for our clients."]} />
                               </div>
                             </div>
                             <div className={styles["div-6"]}>
                               <div className={styles["div-176"]}>
-                                <StatsCard2 locale={locale} slots={["Full Support\nEnd-to-End","We guide every step from company setup, banking, funding, and digital growth."]} />
+                                <StatsCard2 locale={locale} slots={["Full Support\nEnd-to-End","From the first consultation to final approval, we stay with you at every step."]} />
                               </div>
                             </div>
                           </div>
@@ -494,7 +470,7 @@ export default function About({ slots = [] , locale = "en" }: { slots?: string[]
             <div className={styles["div-132"]}>
               <div className={styles["div-6"]}>
                 <SiteTicker locale={locale} />
-                <Footer4 locale={locale} slots={["https://framerusercontent.com/images/nuF5MBQa5OHhR97TinwZmRWx23s.webp?width=1344&height=1170","Ready to Take the Next Step?","Book a Free Consultation","https://framerusercontent.com/images/f2noCmvFpCpDTUk11PGBQjkxAY.png?scale-down-to=512&width=3448&height=3076","Your trusted partner for business, banking, finance, mortgages, and digital growth across the UAE.","Main Pages","Home","About","Services","Free Consultation","Contact Us","Services","Business Setup","Business Bank Accounts","Business Finance","Mortgage Consultancy","Personal Loans","Credit Card Solutions","Digital Growth","Social Media Growth","All banking and financial products are subject to the eligibility criteria, terms, and final approval of the respective bank. Al Aidy Group does not guarantee approval.","Privacy Policy","© 2026 Al Aidy Group. All rights reserved.","Terms of Use"]} />
+                <Footer4 locale={locale} slots={["https://framerusercontent.com/images/nuF5MBQa5OHhR97TinwZmRWx23s.webp?width=1344&height=1170","Ready to Take the Next Step?","Book a Free Consultation","https://framerusercontent.com/images/f2noCmvFpCpDTUk11PGBQjkxAY.png?scale-down-to=512&width=3448&height=3076","Your trusted partner for business, banking, finance, mortgages, and digital growth across the UAE.","Main Pages","Home","About","Services","Free Consultation","Contact Us","Services","Business Setup","Business Banking Support","Business Finance Support","Mortgage Solutions","Personal Loans","Credit Card Solutions","Digital Growth","Social Media","All banking and financial products are subject to the eligibility criteria, terms, and final approval of the respective bank. Al Aidy Group does not guarantee approval.","Privacy Policy","© 2026 Al Aidy Group. All rights reserved.","Terms of Use"]} />
               </div>
             </div>
           </div>

@@ -16,9 +16,6 @@ import Button23 from "./Button23"
 import Badge from "./Badge"
 import ProcessCard from "./ProcessCard"
 import ProcessCard2 from "./ProcessCard2"
-import Badge2 from "./Badge2"
-import CircleStar from "./CircleStar"
-import Google from "./Google"
 import CardTestimonialCard from "./CardTestimonialCard"
 import InteractionComponentsTestimonialRating from "./InteractionComponentsTestimonialRating"
 import Google2 from "./Google2"
@@ -56,6 +53,49 @@ import StatsCard from "./StatsCard"
 import StatsCard2 from "./StatsCard2"
 import BankLogos from "./BankLogos"
 import SiteTicker from "./SiteTicker"
+
+const testimonials = [
+  {
+    quote: "“Al Aidy Group kept us updated, explained every option clearly, and responded quickly throughout the process.”",
+    name: "Mohamed Mady",
+    type: "Mortgage Client",
+  },
+  {
+    quote: "“Al Aidy Marketing Management was honest, professional, and reliable, making the entire experience smooth and trusted.”",
+    name: "Hazem Abdel Aleem",
+    type: "Marketing Client",
+  },
+  {
+    quote: "“Al Aidy Group delivered clear communication, professional support, and reliable service that exceeded my expectations.”",
+    name: "Omario",
+    type: "Business Client",
+  },
+  {
+    quote: "“Al Aidy Group made the refinancing process clear and smooth, with patient support and professional guidance every step.”",
+    name: "Ivana Jocic",
+    type: "Refinancing Client",
+  },
+  {
+    quote: "“Al Aidy Group processed my application quickly, made every step clear, and answered questions promptly.”",
+    name: "Lilo Sweet",
+    type: "Banking Client",
+  },
+  {
+    quote: "“Al Aidy Group provided excellent mortgage support, great customer service, and smart problem-solving from start to finish.”",
+    name: "Hend Karam",
+    type: "Mortgage Client",
+  },
+  {
+    quote: "“Al Aidy Group understood my business needs and delivered professional marketing solutions with knowledge, care, and dedication.”",
+    name: "Marwa Yassin",
+    type: "Marketing Client",
+  },
+  {
+    quote: "“Al Aidy Group was organized, punctual, and followed up closely, making the mortgage process much smoother.”",
+    name: "Mohammad Naseriddin",
+    type: "Mortgage Client",
+  },
+]
 
 export default function Home3({ slots = [] , locale = "en" }: { slots?: string[] ; locale?: Locale }) {
   return (
@@ -489,7 +529,7 @@ export default function Home3({ slots = [] , locale = "en" }: { slots?: string[]
                   <div className={styles["section-title-container"] + " " + styles["rv-3"]} data-reveal>
                     <div className={styles["div-6"]}>
                       <div className={styles["div-178"]}>
-                        <Badge locale={locale} slots={["/","Our services"]} />
+                        <Badge locale={locale} slots={["/","Our Services"]} />
                       </div>
                     </div>
                     <div className={styles["div-6"]}>
@@ -531,30 +571,33 @@ export default function Home3({ slots = [] , locale = "en" }: { slots?: string[]
               </section>
             <section className={styles["testimonial"]}>
               <div className={styles["title"]}>
-                <div className={styles["section-title"]}>
-                  <div className={styles["div-6"]}>
-                    <div className={styles["div-180"]}>
-                      <Badge2 locale={locale} slots={["/","Testimonial"]} />
-                    </div>
+                <div className={styles["testimonial-header"]}>
+                  <div className={styles["testimonial-copy"]}>
+                    <p className={styles["testimonial-eyebrow"]} dir={locale === "ar" ? "rtl" : "ltr"}>
+                      <span aria-hidden="true">/</span>
+                      <span>{t("Testimonials", locale)}</span>
+                    </p>
+                    <h2 className={styles["testimonials-heading"]}>{t("What Our Clients Say", locale)}</h2>
+                    <p className={styles["testimonial-subtitle"]}>{t(slots[165] ?? "Real experiences from clients who trusted Al Aidy Group with their business and financial goals.", locale)}</p>
                   </div>
-                  <div className={styles["div-6"]}>
-                    <div className={styles["section-description-2"]}>
-                      <h2 className={styles["testimonials-heading"]}>{t("What Our Clients Say", locale)}</h2>
-                      <p className={styles["p-101"]}>{t(slots[165] ?? "Real experiences from clients who trusted Al Aidy Group with their business and financial goals.", locale)}</p>
-                    </div>
-                  </div>
-                  <a className={styles["google-reviews-link"]} href="https://share.google/XWj5cVf1KHia5WqvE">
-                    <CircleStar locale={locale} slots={[]} />
-                    <div className={styles["label"]}>
-                      <p className={styles["p-102"]}>{t(slots[166] ?? "View Our Google Reviews", locale)}</p>
-                    </div>
-                    <Google locale={locale} slots={[]} />
+                  <a className={styles["google-reviews-link"]} href="https://share.google/XWj5cVf1KHia5WqvE" target="_blank" rel="noopener noreferrer">
+                    <Google2 locale={locale} slots={[]} />
+                    <span>{t("View Our Google Reviews", locale)}</span>
                   </a>
                 </div>
               </div>
+              <div className={styles["testimonial-cards"]}>
+                <ul className={styles["testimonial-card-list"]}>
+                  {testimonials.map(review => (
+                    <li key={review.name}>
+                      <CardTestimonialCard locale={locale} slots={["", "", "", "", "", review.quote, review.name, review.type]} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <div className={styles["ticker-1"]}>
                 <section className={styles["section-2"]}>
-                  <ul className={styles["ul-8"] + " " + styles["rv-13"] + " " + styles["loop-4"]} data-reveal>
+                  <ul className={styles["ul-8"]}>
                     <li className={styles["li-8"]}>
                       <div className={styles["div-126"]}>
                         <CardTestimonialCard locale={locale} slots={["https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","“Al Aidy Group kept us updated, explained every option clearly, and responded quickly throughout the process.”","Mohamed Mady","Mortgage Client"]} />
@@ -621,7 +664,7 @@ export default function Home3({ slots = [] , locale = "en" }: { slots?: string[]
               <div className={styles["tickers"]}>
                 <div className={styles["ticker-2"]}>
                   <section className={styles["section-3"]}>
-                    <ul className={styles["ul-9"] + " " + styles["rv-14"] + " " + styles["loop-5"]} data-reveal>
+                    <ul className={styles["ul-9"]}>
                       <li className={styles["li-8"]}>
                         <div className={styles["div-126"]}>
                           <CardTestimonialCard locale={locale} slots={["https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","https://framerusercontent.com/images/tJsOd07kzOCIP0RQ6tCFZQA6AE.png","“Al Aidy Group processed my application quickly, made every step clear, and answered questions promptly.”","Lilo Sweet","Banking Client"]} />
@@ -729,7 +772,7 @@ export default function Home3({ slots = [] , locale = "en" }: { slots?: string[]
           <div className={styles["div-6"]}>
             <div className={styles["div-132"]}>
               <div className={styles["div-6"]}>
-                <Footer4 locale={locale} slots={["https://framerusercontent.com/images/nuF5MBQa5OHhR97TinwZmRWx23s.webp?width=1344&height=1170","Ready to Take the Next Step?","Book a Free Consultation","https://framerusercontent.com/images/f2noCmvFpCpDTUk11PGBQjkxAY.png?scale-down-to=512&width=3448&height=3076","Your trusted partner for business, banking, finance, mortgages, and digital growth across the UAE.","Main Pages","Home","About","Services","Free Consultation","Contact Us","Services","Business Setup","Business Bank Accounts","Business Finance Support","Mortgage Solutions","Personal Loans","Credit Card Solutions","Digital Growth","Social Media Growth","All banking and financial products are subject to the eligibility criteria, terms, and final approval of the respective bank. Al Aidy Group does not guarantee approval.","Privacy Policy","© 2026 Al Aidy Group. All rights reserved.","Terms of Use"]} />
+                <Footer4 locale={locale} slots={["https://framerusercontent.com/images/nuF5MBQa5OHhR97TinwZmRWx23s.webp?width=1344&height=1170","Ready to Take the Next Step?","Book a Free Consultation","https://framerusercontent.com/images/f2noCmvFpCpDTUk11PGBQjkxAY.png?scale-down-to=512&width=3448&height=3076","Your trusted partner for business, banking, finance, mortgages, and digital growth across the UAE.","Main Pages","Home","About","Services","Free Consultation","Contact Us","Services","Business Setup","Business Banking Support","Business Finance Support","Mortgage Solutions","Personal Loans","Credit Card Solutions","Digital Growth","Social Media","All banking and financial products are subject to the eligibility criteria, terms, and final approval of the respective bank. Al Aidy Group does not guarantee approval.","Privacy Policy","© 2026 Al Aidy Group. All rights reserved.","Terms of Use"]} />
               </div>
             </div>
           </div>

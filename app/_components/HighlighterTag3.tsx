@@ -5,7 +5,7 @@ export default function HighlighterTag3({ slots = [] , locale = "en" }: { slots?
   return (
       <div className={styles["dot-small"]}>
         <div className={styles["text-14"]}>
-          <p className={styles["p-62"]}>{t(slots[0] ?? "Our mission", locale)}</p>
+          <p className={styles["p-62"]}>{t(slots[0] ?? "Our Mission", locale)}</p>
         </div>
       </div>
   )
